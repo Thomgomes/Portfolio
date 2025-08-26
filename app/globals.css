@@ -1,104 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-white);
+  --foreground: var(--color-gray-900);
+  --card: var(--color-white);
+  --card-foreground: var(--color-gray-900);
+  --primary: var(--color-primary-600);
+  --primary-foreground: var(--color-white);
+  --secondary: var(--color-secondary-800);
+  --secondary-foreground: var(--color-white);
+  --muted: var(--color-gray-100);
+  --muted-foreground: var(--color-gray-500);
+  --border: var(--color-gray-200);
+
+  --dot-color: var(--color-gray-300);
+  --dot-size: 1.1px;
+  --dot-spacing: 30px;
+}
+
+.dark {
+  --background: var(--color-gray-950);
+  --foreground: var(--color-gray-200);
+  --card: var(--color-gray-900);
+  --card-foreground: var(--color-gray-50);
+  --primary: var(--color-primary-500);
+  --primary-foreground: var(--color-gray-900);
+  --secondary: var(--color-secondary-800);
+  --secondary-foreground: var(--color-gray-50);
+  --muted: var(--color-gray-800);
+  --muted-foreground: var(--color-gray-400);
+  --border: var(--color-gray-800);
+
+  --dot-color: rgba(255, 255, 255, 0.15); /* Pontos brancos com opacidade */
 }
 
 @theme inline {
   --font-sora: "Sora", "sans-serif";
   --font-Work-Sans: "Work Sans", "sans-serif";
-
   --color-transparent: transparent;
   --color-current: currentColor;
   --color-white: #ffffff;
   --color-black: #000000;
-
   --color-gray: {
-    50: #f9fafb;
-    100: #f3f4f6;
-    200: #e5e7eb;
-    300: #d1d5db;
-    400: #9ca3af;
-    500: #6b7280;
-    600: #4b5563;
-    700: #374151;
-    800: #1f2937;
-    900: #111827;
+    50: #f9fafb; 100: #f3f4f6; 200: #e5e7eb; 300: #d1d5db; 400: #9ca3af; 500: #6b7280; 600: #4b5563; 700: #374151; 800: #1f2937; 900: #111827; 950: #030712;
   }
-
-  --color-cyan: {
-    100: #cffafe;
-    200: #a5f3fc;
-    300: #67e8f9;
-    400: #22d3ee;
-    500: #06b6d4;
-    600: #0891b2;
-    800: #155e75;
-    900: #164e63;
+  --color-primary: {
+    50: #f0f9ff; 100: #e0f2fe; 200: #bae6fd; 300: #7dd3fc; 400: #38bdf8; 500: #0ea5e9; 600: #0284c7; 700: #0369a1; 800: #075985; 900: #0c4a6e; 950: #082f49;
   }
-
-  --color-blue: {
-    500: #3b82f6;
-    600: #2563eb;
+  --color-secondary: {
+    50: #f8fafc; 100: #f1f5f9; 200: #e2e8f0; 300: #cbd5e1; 400: #94a3b8; 500: #64748b; 600: #475569; 700: #334155; 800: #1e293b; 900: #0f172a; 950: #020617;
   }
-
-  --color-pink: {
-    500: #ec4899;
-  }
-
-  --color-indigo: {
-    500: #6366f1;
-  }
-
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-
-  --radius-DEFAULT: 0.75rem;
-  --radius-sm: 0.5rem;
-  --radius-lg: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--color-gray-50);
-    --foreground: var(--color-gray-800);
-    --card: var(--color-white);
-    --card-foreground: var(--color-gray-800);
-    --primary: var(--color-cyan-600);
-    --primary-foreground: var(--color-white);
-    --secondary: var(--color-blue-600);
-    --muted: var(--color-gray-200);
-    --muted-foreground: var(--color-gray-800);
-    --border: var(--color-gray-200);
-  }
-
-  .dark {
-    --background: #121828;
-    --foreground: var(--color-gray-200);
-    --card: #1a2238;
-    --card-foreground: var(--color-white);
-    --primary: var(--color-cyan-400);
-    --primary-foreground: var(--color-gray-900);
-    --secondary: var(--color-cyan-600);
-    --muted: var(--color-gray-700);
-    --muted-foreground: var(--color-gray-300);
-    --border: var(--color-gray-700);
-  }
+  --breakpoint-sm: 640px; --breakpoint-md: 768px; --breakpoint-lg: 1024px; --breakpoint-xl: 1280px;
+  --radius-DEFAULT: 0.75rem; --radius-sm: 0.5rem; --radius-lg: 1rem;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sora), sans-serif;
+  font-family: var(--font-sora);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: var(--font-Work-Sans);
+}
+
+.dotted-background {
+  background-color: var(--background); /* Usa a cor de fundo do tema atual */
+  background-image: radial-gradient(
+    circle at center, 
+    var(--dot-color) var(--dot-size), 
+    transparent 0
+  );
+  background-size: var(--dot-spacing) var(--dot-spacing);
 }

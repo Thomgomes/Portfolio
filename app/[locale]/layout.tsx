@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora, Work_Sans } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -30,7 +31,16 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${sora.variable} ${workSans.variable} antialiased`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
