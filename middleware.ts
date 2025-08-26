@@ -1,10 +1,8 @@
-import createMiddleware from "next-intl/middleware";
+import createMiddleware from "next-intl/middleware"
+import { routing } from "./i18n/routing"
 
-export default createMiddleware({
-  locales: ["en", "pt-br"],
-  defaultLocale: "pt-br"
-});
+export default createMiddleware(routing)
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
-};
+  matcher: ['/', '/(pt-BR|en):path*'],
+}

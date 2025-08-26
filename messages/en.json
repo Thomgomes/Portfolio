@@ -1,0 +1,57 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Welcome to",
+    "title": "Hi, I’m Thom Gomes",
+    "subtitle": "Front-end Developer",
+    "description": "I create beautiful and functional digital experiences.",
+    "cvbutton": "Download CV",
+    "contactbutton": "Get in touch"
+  },
+  "about": {
+    "title": "A little about me",
+    "description": "My name is Thomás Gomes, but you can call me Thom. I work as a freelance Frontend Developer creating modern and efficient interfaces, focused on performance, animations, responsiveness, and SEO. I’m currently studying Systems Analysis and Development."
+  },
+  "skills": {
+    "title": "Skills",
+    "description1": "I usually work with React and Tailwind as my main development tools because I value the efficiency, modularity, and productivity they offer.",
+    "key1": "React",
+    "key2": "Next.js",
+    "key3": "Tailwind CSS",
+    "description2": "The simplified syntax of Tailwind combined with the componentization of React allows me to build dynamic, elegant, and highly responsive projects."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Here are some of my recent works. To see more, visit my GitHub.",
+    "project1": {
+      "title": "Project 1",
+      "description": "Description of Project 1"
+    },
+    "project2": {
+      "title": "Project 2",
+      "description": "Description of Project 2"
+    },
+    "project3": {
+      "title": "Project 3",
+      "description": "Description of Project 3"
+    }
+  },
+  "contact": {
+    "title": "Interested in my work?",
+    "subtitle": "Get in touch with me",
+    "name": "Name",
+    "name-placeholder": "Enter your name",
+    "email": "Email",
+    "email-placeholder": "email@example.com",
+    "message": "Message",
+    "message-placeholder": "How can I help you?"
+  },
+  "footer": {
+    "text": "All rights reserved."
+  }
+}
