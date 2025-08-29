@@ -1,5 +1,6 @@
 // import { useTranslations } from "next-intl";
 
+import { Line } from "@/components/line";
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
 
 const ArrowIcon = () => (
@@ -25,15 +26,7 @@ export default function HomePage() {
   return (
     <>
       <div className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-gray-800 to-gray-950">
-        {/* Linha decorativa no topo e no fundo (opcional) */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -bottom-10 left-1/2 z-0 h-24 w-[120%] -translate-x-1/2 rotate-2 opacity-40"
-          style={{
-            background:
-              "linear-gradient(90deg, #121217 0%, #0075ad 50%, #121217 100%)",
-          }}
-        />
+        <Line position="bottom"/>
 
         <div className="container mx-auto px-4 grid gap-20 py-24 lg:grid-cols-2 lg:gap-10 lg:py-44">
           {/* Lado Esquerdo: Conteúdo de Texto */}
@@ -70,11 +63,11 @@ export default function HomePage() {
           </div>
 
           {/* Lado Direito: Elementos Visuais Flutuantes */}
-          <div className="relative z-0">
+          <div className="relative flex flex-col">
             {/* 1. A Janela do Navegador */}
             <div className="max-w-[35rem] overflow-hidden rounded-md border border-gray-200 bg-white shadow-2xl shadow-blue-400/50">
               <div className="flex h-8 items-center justify-center border-b border-gray-200 bg-gray-50 p-1">
-                <div className="h-3 w-40 truncate rounded-md bg-gray-200 px-4 text-center text-xs text-gray-500">
+                <div className="w-40 truncate rounded-md bg-gray-200 px-4  text-center text-xs text-gray-500">
                   paradigm.com/apparel
                 </div>
               </div>
@@ -85,7 +78,7 @@ export default function HomePage() {
             </div>
 
             {/* 2. O Bloco de Código Flutuante */}
-            <div className="absolute -bottom-40 left-0 origin-bottom-left scale-[0.65] rounded-md bg-gray-900 shadow-2xl shadow-black/80 lg:-bottom-24 lg:-left-24">
+            <div className="scale-[0.65] rounded-md bg-gray-900 shadow-2xl shadow-black/80">
               <p className="bg-gray-700 px-4 py-3 text-sm text-gray-200 rounded-md">
                 dialog/pray.ts
               </p>
