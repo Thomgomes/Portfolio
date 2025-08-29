@@ -1,7 +1,10 @@
 // import { useTranslations } from "next-intl";
 
 import { Line } from "@/components/line";
+import Pray from "@/components/pray";
+import ProjectShowcase from "@/components/project-showcase";
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
+import TitleGradient from "@/components/title-gradient";
 
 const ArrowIcon = () => (
   <svg
@@ -24,7 +27,7 @@ export default function HomePage() {
   // const t = useTranslations('');
 
   return (
-    <>
+    <main>
       <div className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-gray-800 to-gray-950">
         <Line position="bottom"/>
 
@@ -34,15 +37,9 @@ export default function HomePage() {
             <ThemeToggleButton />
           </div>
           <div className="z-10 lg:pt-10">
-            <h1
-              className="text-4xl font-semibold tracking-tight text-transparent lg:text-6xl bg-clip-text"
-              style={{
-                backgroundImage:
-                  "radial-gradient(138.06% 1036.51% at 95.25% -2.54%, #70d1ff 14.06%, #ade4ff 51.02%, #dbf3ff 79.09%)",
-              }}
-            >
-              Going international with Next.jeee
-            </h1>
+            <TitleGradient value="h1" className="mt-4 text-4xl font-semibold tracking-tight text-transparent lg:text-6xl bg-clip-text">
+              tste
+            </TitleGradient>
             <p className="mt-4 text-lg text-gray-300 lg:text-xl">
               Learn how to build delightful, multilingual experiences with the
               official{" "}
@@ -65,44 +62,10 @@ export default function HomePage() {
           {/* Lado Direito: Elementos Visuais Flutuantes */}
           <div className="relative flex flex-col">
             {/* 1. A Janela do Navegador */}
-            <div className="max-w-[35rem] overflow-hidden rounded-md border border-gray-200 bg-white shadow-2xl shadow-blue-400/50">
-              <div className="flex h-8 items-center justify-center border-b border-gray-200 bg-gray-50 p-1">
-                <div className="w-40 truncate rounded-md bg-gray-200 px-4  text-center text-xs text-gray-500">
-                  paradigm.com/apparel
-                </div>
-              </div>
-              {/* Você pode substituir por um <img /> ou outro conteúdo */}
-              <div className="h-64 bg-gray-100 flex items-center justify-center">
-                <p className="text-gray-400">Seu conteúdo ou imagem aqui</p>
-              </div>
-            </div>
+            <ProjectShowcase route="paradigm.com/apparel"/>
 
             {/* 2. O Bloco de Código Flutuante */}
-            <div className="scale-[0.65] rounded-md bg-gray-900 shadow-2xl shadow-black/80">
-              <p className="bg-gray-700 px-4 py-3 text-sm text-gray-200 rounded-md">
-                dialog/pray.ts
-              </p>
-              <pre className="overflow-x-auto p-4 text-sm text-white">
-                <code>
-                  {`const holyPrayer = \`
-    Código nosso que estás em C,
-    Santificado seja vós, Console.
-    Venha a nós o vosso array,
-    E seja feita, sim, {vossa chave}.
-    Assim no if{} como no else{},
-    O for(nosso; de cada dia; nos dai hoje++).
-    Debugai as nossas sentenças,
-    Assim como nós colocamos o ponto e vírgula esquecido;
-    E não nos deixeis errar a indentação.
-    Mas livrai-nos das funções recursivas,
-    A main(). 
-  \`;
-
-export default holyPrayer;
-`}
-                </code>
-              </pre>
-            </div>
+            <Pray/>
           </div>
         </div>
       </div>
@@ -118,6 +81,6 @@ export default holyPrayer;
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }
