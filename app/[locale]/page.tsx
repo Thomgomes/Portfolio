@@ -1,10 +1,12 @@
 // import { useTranslations } from "next-intl";
 
+import Header from "@/components/layout/header";
 import { Line } from "@/components/line";
 import Pray from "@/components/pray";
 import ProjectShowcase from "@/components/project-showcase";
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
 import TitleGradient from "@/components/title-gradient";
+
 
 const ArrowIcon = () => (
   <svg
@@ -29,6 +31,7 @@ export default function HomePage() {
   return (
     <main>
       <div className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-gray-800 to-gray-950">
+        <Header/>
         <Line position="bottom"/>
 
         <div className="container mx-auto px-4 grid gap-20 py-24 lg:grid-cols-2 lg:gap-10 lg:py-44">
