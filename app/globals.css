@@ -1,37 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: var(--color-white);
-  --foreground: var(--color-gray-900);
-  --card: var(--color-white);
-  --card-foreground: var(--color-gray-900);
-  --primary: var(--color-primary-600);
-  --primary-foreground: var(--color-white);
-  --secondary: var(--color-secondary-800);
-  --secondary-foreground: var(--color-white);
-  --muted: var(--color-gray-100);
-  --muted-foreground: var(--color-gray-500);
-  --border: var(--color-gray-200);
+  /* Tema Claro com base na nova paleta */
+  --background: #ffffff;
+  --foreground: #1c1c1c;
+  --card: #ffffff;
+  --card-foreground: #1c1c1c;
+  --primary: #dd5a25; /* Cor de destaque Laranja */
+  --primary-foreground: #ffffff;
+  --secondary: #71717a; /* Cinza médio como secundário */
+  --secondary-foreground: #ffffff;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
 
-  --dot-color: rgb(209, 213, 219, 0.8);
+  --dot-color: rgba(209, 213, 219, 0.8);
   --dot-size: 1.1px;
   --dot-spacing: 36px;
 }
 
 .dark {
-  --background: var(--color-gray-950);
-  --foreground: var(--color-gray-200);
-  --card: var(--color-gray-900);
-  --card-foreground: var(--color-gray-50);
-  --primary: var(--color-primary-500);
-  --primary-foreground: var(--color-gray-900);
-  --secondary: var(--color-secondary-800);
-  --secondary-foreground: var(--color-gray-50);
-  --muted: var(--color-gray-800);
-  --muted-foreground: var(--color-gray-400);
-  --border: var(--color-gray-800);
+  /* Tema Escuro com base na nova paleta */
+  --background: #0d0d0d;
+  --foreground: #e2e8f0;
+  --card: #1c1c1c;
+  --card-foreground: #e2e8f0;
+  --primary: #dd5a25; /* Cor de destaque Laranja */
+  --primary-foreground: #ffffff;
+  --secondary: #a1a1aa; /* Cinza claro como secundário */
+  --secondary-foreground: #0d0d0d;
+  --muted: #2a2a2a;
+  --muted-foreground: #a1a1aa;
+  --border: #2a2a2a;
 
-  --dot-color: rgba(255, 255, 255, 0.13); /* Pontos brancos com opacidade */
+  --dot-color: rgba(221, 90, 37, 0.1); /* Pontos com a cor de destaque */
 }
 
 @theme inline {
@@ -54,31 +56,33 @@
     900: #111827;
     950: #030712;
   }
+  /* Nova paleta de cor primária (Laranja) */
   --color-primary: {
-    50: #f0f9ff;
-    100: #e0f2fe;
-    200: #bae6fd;
-    300: #7dd3fc;
-    400: #38bdf8;
-    500: #0ea5e9;
-    600: #0284c7;
-    700: #0369a1;
-    800: #075985;
-    900: #0c4a6e;
-    950: #082f49;
+    50: '#fff0e9';
+    100: '#ffe2d3';
+    200: '#ffc4a8';
+    300: '#ffa77c';
+    400: '#ff8951';
+    500: '#dd5a25';
+    600: '#c74f20';
+    700: '#a1401a';
+    800: '#7b3114';
+    900: '#55220e';
+    950: '#2d1107';
   }
+  /* Paleta secundária (Cinza) */
   --color-secondary: {
-    50: #f8fafc;
-    100: #f1f5f9;
-    200: #e2e8f0;
-    300: #cbd5e1;
-    400: #94a3b8;
-    500: #64748b;
-    600: #475569;
-    700: #334155;
-    800: #1e293b;
-    900: #0f172a;
-    950: #020617;
+    50: #f9fafb;
+    100: #f3f4f6;
+    200: #e5e7eb;
+    300: #d1d5db;
+    400: #9ca3af;
+    500: #6b7280;
+    600: #4b5563;
+    700: #374151;
+    800: #1f2937;
+    900: #111827;
+    950: #030712;
   }
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;

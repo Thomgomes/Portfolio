@@ -1,4 +1,4 @@
-// import { useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 import Header from "@/components/layout/header";
 import { Line } from "@/components/line";
@@ -25,7 +25,7 @@ const ArrowIcon = () => (
 );
 
 export default function HomePage() {
-  // const t = useTranslations('');
+  const t = useTranslations('home');
 
   return (
     <main>
@@ -34,7 +34,7 @@ export default function HomePage() {
         <Line position="bottom" />
 
         <div className="container mx-auto px-4 grid gap-20 py-24 lg:grid-cols-2 lg:gap-10 lg:py-44">
-          {/* Lado Esquerdo: Conteúdo de Texto */}
+          {/* Lado Esquerdo */}
           <div className="absolute top-4 right-4">
             <ThemeToggleButton />
           </div>
@@ -43,15 +43,10 @@ export default function HomePage() {
               value="h1"
               className="mt-4 text-4xl font-semibold tracking-tight text-transparent lg:text-6xl bg-clip-text"
             >
-              tste
+              {t('title')}
             </TitleGradient>
             <p className="mt-4 text-lg text-gray-300 lg:text-xl">
-              Learn how to build delightful, multilingual experiences with the
-              official{" "}
-              <code className="whitespace-nowrap rounded border border-gray-700 bg-gray-800 px-1 py-[2px] font-mono text-[0.9em]">
-                next-intl
-              </code>{" "}
-              course.
+              {t('subtitle')}
             </p>
             <div className="mt-10 flex flex-col gap-4 lg:flex-row">
               <a
@@ -59,17 +54,15 @@ export default function HomePage() {
                 className="group inline-flex items-center justify-center gap-2 rounded-lg bg-white px-5 py-3 text-base font-medium text-surface-900 transition hover:bg-gray-200"
               >
                 <ArrowIcon />
-                Get access now
+                {t('cvbutton')}
               </a>
             </div>
           </div>
 
-          {/* Lado Direito: Elementos Visuais Flutuantes */}
+          {/* Lado Direito */}
           <div className="relative flex flex-col">
-            {/* 1. A Janela do Navegador */}
             <ProjectShowcase route="paradigm.com/apparel" />
 
-            {/* 2. O Bloco de Código Flutuante */}
             <Pray />
           </div>
         </div>
