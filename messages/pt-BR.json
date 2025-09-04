@@ -10,12 +10,12 @@
     "title": "Thom Gomes",
     "subtitle": "Desenvolvedor Front-end",
     "description": "Eu crio experiências digitais bonitas e funcionais.",
-    "cvbutton": "Download CV",
-    "contactbutton": "Entrar em contato"
+    "cvbutton": "Baixar CV",
+    "about-tbutton": "Saiba sobre mim"
   },
   "about": {
-    "title": "Um pouco sobre mim",
-    "description": "Meu nome é Thomás Gomes, mas pode me chamar de Thom. Atuo como freelancer Frontend criando interfaces modernas e eficientes, focadas em performance, animações, responsividade e SEO. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas."
+    "title": "Um Pouco Sobre Mim",
+    "description": "Sou um desenvolvedor freelancer e estudante de Análise e Desenvolvimento de Sistemas. Minha paixão é criar interfaces modernas e soluções digitais eficientes, com foco em performance e na experiência do usuário. Atualmente, estou aprofundando meus conhecimentos em back-end para me tornar um desenvolvedor ainda mais completo. Dedico meu tempo livre a projetos pessoais e à análise de código para melhorar continuamente minha técnica, construindo desde sites para pequenas empresas até ricas aplicações web interativas."
   },
   "skills": {
     "title": "Conhecimentos",
@@ -25,8 +25,8 @@
     "key3": "Tailwind CSS",
     "description2": "A sintaxe simplificada do Tailwind, combinada à componentização do React, me permite criar projetos dinâmicos, elegantes e altamente responsivos."
   },
-  "portfolio": {
-    "title": "Portfolio",
+  "projects": {
+    "title": "Projetos",
     "description": "Aqui estão alguns dos meus trabalhos recentes. Para ver mais, visite meu GitHub.",
     "project1": {
       "title": "Projeto 1",

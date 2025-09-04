@@ -11,7 +11,7 @@
     "subtitle": "Front-end Developer",
     "description": "I create beautiful and functional digital experiences.",
     "cvbutton": "Download CV",
-    "contactbutton": "Get in touch"
+    "aboutbutton": "About me"
   },
   "about": {
     "title": "A little about me",
@@ -25,8 +25,8 @@
     "key3": "Tailwind CSS",
     "description2": "The simplified syntax of Tailwind combined with the componentization of React allows me to build dynamic, elegant, and highly responsive projects."
   },
-  "portfolio": {
-    "title": "Portfolio",
+  "projects": {
+    "title": "Projects",
     "description": "Here are some of my recent works. To see more, visit my GitHub.",
     "project1": {
       "title": "Project 1",
