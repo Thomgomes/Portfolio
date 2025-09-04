@@ -1,15 +1,16 @@
-'use client';
+"use client";
 import { useTranslations } from "next-intl";
 
 import Header from "@/components/layout/header";
 import { Line } from "@/components/line";
-import ProjectShowcase from "@/components/project-showcase";
 import ParticleBackground from "@/components/particle-background";
 import {
   ArrowBigDownDash,
   Code,
   Database,
   Eye,
+  Github,
+  MonitorPlay,
   ShieldCheck,
   TrendingUp,
   Wand2,
@@ -39,10 +40,21 @@ const skills = [
   "Figma",
 ];
 
+const servicesList = [
+  { key: "service1", Icon: Code },
+  { key: "service2", Icon: Eye },
+  { key: "service3", Icon: Zap },
+  { key: "service4", Icon: Database },
+  { key: "service5", Icon: TrendingUp },
+  { key: "service6", Icon: Wand2 },
+  { key: "service7", Icon: ShieldCheck },
+];
+
 export default function HomePage() {
   const th = useTranslations("home");
   const ta = useTranslations("about");
   const tp = useTranslations("projects");
+  const tsrv = useTranslations("services");
   const tc = useTranslations("contact");
   const tf = useTranslations("footer");
 
@@ -85,8 +97,12 @@ export default function HomePage() {
           </section>
         </section>
 
-        <section id="about" ref={aboutSectionRef} className="relative py-20 lg:py-32">
-          <ParticleBackground parentRef={aboutSectionRef}/>
+        <section
+          id="about"
+          ref={aboutSectionRef}
+          className="relative py-20 lg:py-32"
+        >
+          <ParticleBackground parentRef={aboutSectionRef} />
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-center">
               <div className="lg:col-span-1 flex justify-center">
@@ -146,9 +162,18 @@ export default function HomePage() {
                   <CardDescription className="mb-4">
                     {tp("project1.description")}
                   </CardDescription>
-                  <Button asChild variant="link" className="p-0 h-auto">
-                    <a href="#">Ver detalhes &rarr;</a>
-                  </Button>
+                  <div className="flex justify-between w-full">
+                    <Button asChild variant="link" className="p-0 h-auto">
+                      <a href="#">
+                        {tp("github")} <Github />
+                      </a>
+                    </Button>
+                    <Button asChild variant="link" className="p-0 h-auto">
+                      <a href="#">
+                        {tp("monitor-play")} <MonitorPlay />
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -168,9 +193,18 @@ export default function HomePage() {
                   <CardDescription className="mb-4">
                     {tp("project2.description")}
                   </CardDescription>
-                  <Button asChild variant="link" className="p-0 h-auto">
-                    <a href="#">Ver detalhes &rarr;</a>
-                  </Button>
+                  <div className="flex justify-between w-full">
+                    <Button asChild variant="link" className="p-0 h-auto">
+                      <a href="#">
+                        {tp("github")} <Github />
+                      </a>
+                    </Button>
+                    <Button asChild variant="link" className="p-0 h-auto">
+                      <a href="#">
+                        {tp("monitor-play")} <MonitorPlay />
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -178,98 +212,28 @@ export default function HomePage() {
         </section>
 
         {/* Section: Services (O que eu ofereço) */}
-        <section id="services" ref={servicesSectionRef} className="relative py-20 lg:py-32">
-          <ParticleBackground parentRef={servicesSectionRef}/>
+        <section
+          id="services"
+          ref={servicesSectionRef}
+          className="relative py-20 lg:py-32"
+        >
+          <ParticleBackground parentRef={servicesSectionRef} />
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl font-bold text-center mb-12">
-              O que eu ofereço
+              {tsrv("title")}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-              {/* Refatorado com <Card> */}
-              <Card>
-                <CardHeader>
-                  <Code className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <CardTitle>Desenvolvimento Web</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Criação de sites e aplicações web completas, do zero à
-                    implantação.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Eye className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <CardTitle>UI/UX Design</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Interfaces focadas na experiência do usuário, criando
-                    layouts intuitivos e atraentes.{" "}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Zap className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <CardTitle>Otimização & Performance</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Análise e melhoria para garantir que seu site seja rápido e
-                    eficiente.{" "}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Database className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <CardTitle>Integração com APIs</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Conexão com APIs RESTful/GraphQL e bancos de dados para
-                    criar experiências ricas e dinâmicas.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <TrendingUp className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <CardTitle>SEO Técnico</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Otimização de Core Web Vitals e HTML semântico para melhorar
-                    o ranking do seu site no Google.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Wand2 className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <CardTitle>Animações e Microinterações</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Criação de interfaces envolventes com animações fluidas que
-                    melhoram a experiência do usuário.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <ShieldCheck className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <CardTitle>Manutenção e Suporte</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Garanta que seu site continue seguro, atualizado e
-                    performático com suporte contínuo e correção de bugs.
-                  </CardDescription>
-                </CardContent>
-              </Card>
+              {servicesList.map(({ key, Icon }) => (
+                <Card key={key}>
+                  <CardHeader>
+                    <Icon className="h-12 w-12 mx-auto mb-4 text-primary" />
+                    <CardTitle>{tsrv(`${key}.title`)}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription>{tsrv(`${key}.description`)}</CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
@@ -282,7 +246,7 @@ export default function HomePage() {
               {tc("subtitle")}
             </p>
             <Button asChild size="lg">
-              <a href="mailto:contato@thomgomes.com">Entrar em Contato</a>
+              <a href="mailto:contato@thomgomes.com">{tc("button")}</a>
             </Button>
           </div>
         </section>

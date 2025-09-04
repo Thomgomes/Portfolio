@@ -14,42 +14,58 @@
     "aboutbutton": "About me"
   },
   "about": {
-    "title": "A little about me",
-    "description": "My name is Thomás Gomes, but you can call me Thom. I work as a freelance Frontend Developer creating modern and efficient interfaces, focused on performance, animations, responsiveness, and SEO. I’m currently studying Systems Analysis and Development."
-  },
-  "skills": {
-    "title": "Skills",
-    "description1": "I usually work with React and Tailwind as my main development tools because I value the efficiency, modularity, and productivity they offer.",
-    "key1": "React",
-    "key2": "Next.js",
-    "key3": "Tailwind CSS",
-    "description2": "The simplified syntax of Tailwind combined with the componentization of React allows me to build dynamic, elegant, and highly responsive projects."
+    "title": "A Little About Me",
+    "description": "My name is Thomás Gomes, but you can call me Thom. I work as a freelance Front-end Developer creating modern and efficient interfaces, focused on performance, animations, responsiveness, and SEO. I’m currently studying Systems Analysis and Development."
   },
   "projects": {
-    "title": "Projects",
+    "title": "Recent Projects",
     "description": "Here are some of my recent works. To see more, visit my GitHub.",
     "project1": {
-      "title": "Project 1",
-      "description": "Description of Project 1"
+      "title": "Project A",
+      "description": "A brief description of what this project was, the technologies used, and the goal achieved."
     },
     "project2": {
-      "title": "Project 2",
-      "description": "Description of Project 2"
+      "title": "Project B",
+      "description": "A brief description of what this project was, the technologies used, and the goal achieved."
     },
-    "project3": {
-      "title": "Project 3",
-      "description": "Description of Project 3"
+    "github": "repository",
+    "monitor-play": "View project"
+  },
+  "services": {
+    "title": "What I Offer",
+    "service1": {
+      "title": "Web Development",
+      "description": "Creation of complete websites and web applications, from scratch to deployment."
+    },
+    "service2": {
+      "title": "UI/UX Design",
+      "description": "User-centric interfaces, creating intuitive and attractive layouts."
+    },
+    "service3": {
+      "title": "Optimization & Performance",
+      "description": "Analysis and improvement to ensure your website is fast and efficient."
+    },
+    "service4": {
+      "title": "API Integration",
+      "description": "Connection with APIs and databases to create rich and dynamic experiences."
+    },
+    "service5": {
+      "title": "Technical SEO",
+      "description": "Optimization to improve your site's ranking in search engines."
+    },
+    "service6": {
+      "title": "Animations & Microinteractions",
+      "description": "Creating engaging interfaces with fluid animations that enhance the experience."
+    },
+    "service7": {
+      "title": "Maintenance and Support",
+      "description": "Ongoing support to ensure your site remains secure, updated, and performant."
     }
   },
   "contact": {
-    "title": "Interested in my work?",
-    "subtitle": "Get in touch with me",
-    "name": "Name",
-    "name-placeholder": "Enter your name",
-    "email": "Email",
-    "email-placeholder": "email@example.com",
-    "message": "Message",
-    "message-placeholder": "How can I help you?"
+    "title": "Let's work together?",
+    "subtitle": "If you have an idea or project in mind, get in touch. I'm available for new challenges.",
+    "button": "Get in Touch"
   },
   "footer": {
     "text": "All rights reserved."

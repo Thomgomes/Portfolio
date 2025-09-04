@@ -9,47 +9,63 @@
   "home": {
     "title": "Thom Gomes",
     "subtitle": "Desenvolvedor Front-end",
-    "description": "Eu crio experiências digitais bonitas e funcionais.",
+    "description": "I create beautiful and functional digital experiences.",
     "cvbutton": "Baixar CV",
-    "about-tbutton": "Saiba sobre mim"
+    "aboutbutton": "Saiba sobre mim"
   },
   "about": {
     "title": "Um Pouco Sobre Mim",
     "description": "Meu nome é Thomás Gomes, mas pode me chamar de Thom. Trabalho como desenvolvedor front-end freelancer, criando interfaces modernas e eficientes, com foco em performance, animações, responsividade e SEO. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas."
   },
-  "skills": {
-    "title": "Conhecimentos",
-    "description1": "Costumo trabalhar com React e Tailwind como minhas principais ferramentas de desenvolvimento, pois valorizo a eficiência, a modularidade e a produtividade que oferecem.",
-    "key1": "React",
-    "key2": "Next.js",
-    "key3": "Tailwind CSS",
-    "description2": "A sintaxe simplificada do Tailwind, combinada à componentização do React, me permite criar projetos dinâmicos, elegantes e altamente responsivos."
-  },
   "projects": {
-    "title": "Projetos",
+    "title": "Projetos Recentes",
     "description": "Aqui estão alguns dos meus trabalhos recentes. Para ver mais, visite meu GitHub.",
     "project1": {
-      "title": "Projeto 1",
-      "description": "Descrição do Projeto 1"
+      "title": "Projeto A",
+      "description": "Uma breve descrição do que foi este projeto, as tecnologias usadas e o objetivo alcançado."
     },
     "project2": {
-      "title": "Projeto 2",
-      "description": "Descrição do Projeto 2"
+      "title": "Projeto B",
+      "description": "Uma breve descrição do que foi este projeto, as tecnologias usadas e o objetivo alcançado."
     },
-    "project3": {
-      "title": "Projeto 3",
-      "description": "Descrição do Projeto 3"
+    "github": "Ver repositório",
+    "monitor-play": "Visualizar projeto"
+  },
+  "services": {
+    "title": "O que eu ofereço",
+    "service1": {
+      "title": "Desenvolvimento Web",
+      "description": "Criação de sites e aplicações web completas, do zero à implantação."
+    },
+    "service2": {
+      "title": "UI/UX Design",
+      "description": "Interfaces focadas na experiência do usuário, criando layouts intuitivos e atraentes."
+    },
+    "service3": {
+      "title": "Otimização & Performance",
+      "description": "Análise e melhoria para garantir que seu site seja rápido e eficiente."
+    },
+    "service4": {
+      "title": "Integração com APIs",
+      "description": "Conexão com APIs e bancos de dados para criar experiências ricas e dinâmicas."
+    },
+    "service5": {
+      "title": "SEO Técnico",
+      "description": "Otimização para melhorar o ranking do seu site nos mecanismos de busca."
+    },
+    "service6": {
+      "title": "Animações e Microinterações",
+      "description": "Criação de interfaces envolventes com animações fluidas que melhoram a experiência."
+    },
+    "service7": {
+      "title": "Manutenção e Suporte",
+      "description": "Suporte contínuo para garantir que seu site continue seguro, atualizado e performático."
     }
   },
   "contact": {
-    "title": "Se interessou pelo meu trabalho?",
-    "subtitle": "Entre em contato comigo",
-    "name": "Nome",
-    "name-placeholder": "Digite seu nome",
-    "email": "Email",
-    "email-placeholder": "email@exemplo.com",
-    "message": "Mensagem",
-    "message-placeholder": "Como posso te ajudar?"
+    "title": "Vamos trabalhar juntos?",
+    "subtitle": "Se você tem uma ideia ou projeto em mente, entre em contato. Estou disponível para novos desafios.",
+    "button": "Entrar em Contato"
   },
   "footer": {
     "text": "Todos os direitos reservados."
