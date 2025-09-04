@@ -37,6 +37,7 @@
 }
 
 @theme inline {
+  --color-background: var(--background);
   --font-sora: "Sora", "sans-serif";
   --font-Work-Sans: "Work Sans", "sans-serif";
   --color-transparent: transparent;

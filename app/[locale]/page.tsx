@@ -6,6 +6,7 @@ import Pray from "@/components/pray";
 import ProjectShowcase from "@/components/project-showcase";
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
 import TitleGradient from "@/components/title-gradient";
+import ParticleBackground from "@/components/particle-background";
 
 const ArrowIcon = () => (
   <svg
@@ -67,18 +68,19 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen w-full dotted-background text-foreground flex flex-col items-center justify-center p-8">
+      <section className="relative min-h-screen w-full overflow-hidden text-foreground flex flex-col items-center justify-center p-8">
+        <ParticleBackground/>
         <div className="text-center space-y-4">
           <h1 className="text-3xl font-bold">Teste de Tema</h1>
           <p className="text-muted-foreground">
-            Clique no botão abaixo para alternar entre o modo claro e escuro.
+            Clique no botão abaixo para alternar entre o modo claro e escuro. a
           </p>
           <p>O fundo e a cor do texto devem mudar.</p>
           <div className="mt-4">
             <ThemeToggleButton />
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
