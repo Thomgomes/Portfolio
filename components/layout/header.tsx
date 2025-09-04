@@ -2,25 +2,28 @@ import { useTranslations } from "next-intl";
 import { ThemeToggleButton } from "../theme-toggle-button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
   const t = useTranslations("header");
   const navLinks = ["home", "about", "projects", "services", "contact"];
 
   return (
-    <header className="z-10 w-full fixed top-0 border-b border-[#3333] backdrop-blur-sm bg-black/30">
-      <div className="container mx-auto px-4 py-3 flex justify-between">
+    <header className="z-10 w-full fixed top-0 border-b border-[#3333] backdrop-blur-sm bg-background/30">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-3xl font-bold">Logo</h1>
+        <a href="https://github.com/Thomgomes" target="_blank" className="text-3xl font-bold">
+        <Image src="/gifs/thomty.gif" alt="" width={60} height={60}/>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex items-center space-x-4 lg:space-x-6 text-white">
+          <ul className="flex items-center space-x-4 lg:space-x-6 text-primary">
             {navLinks.map((link) => (
               <li key={link}>
                 <a
                   href={`#${t(link)}`}
-                  className="text-sm font-medium hover:underline underline-offset-4"
+                  className="text-sm font-semibold hover:underline underline-offset-4"
                 >
                   {t(link)}
                 </a>

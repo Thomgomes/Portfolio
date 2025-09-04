@@ -115,12 +115,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-Work-Sans);
-}
-
 .dotted-background {
   background-color: var(--background-alt);
   background-image: radial-gradient(
