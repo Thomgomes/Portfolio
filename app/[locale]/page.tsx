@@ -51,6 +51,7 @@ const servicesList = [
 ];
 
 export default function HomePage() {
+  const t = useTranslations("header");
   const th = useTranslations("home");
   const ta = useTranslations("about");
   const tp = useTranslations("projects");
@@ -65,7 +66,7 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        <section className="relative w-full min-h-8/12 overflow-hidden bg-gradient-to-br from-background to-background-alt transition-colors duration-200">
+        <section id={t("home")} className="relative w-full min-h-8/12 overflow-hidden bg-gradient-to-br from-background to-background-alt transition-colors duration-200">
           <Line position="bottom" />
 
           <section className="container mx-auto px-4 h-screen flex items-center justify-between">
@@ -98,7 +99,7 @@ export default function HomePage() {
         </section>
 
         <section
-          id="about"
+          id={t("about")}
           ref={aboutSectionRef}
           className="relative py-20 lg:py-32"
         >
@@ -137,7 +138,7 @@ export default function HomePage() {
         </section>
 
         {/* Section: Projects */}
-        <section id="projects" className="dotted-background py-20 lg:py-32">
+        <section id={t("projects")} className="dotted-background py-20 lg:py-32">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-3xl font-bold text-center mb-4">
               {tp("title")}
@@ -213,7 +214,7 @@ export default function HomePage() {
 
         {/* Section: Services (O que eu ofereço) */}
         <section
-          id="services"
+          id={t("services")}
           ref={servicesSectionRef}
           className="relative py-20 lg:py-32"
         >
@@ -239,7 +240,7 @@ export default function HomePage() {
         </section>
 
         {/* Section: Contact */}
-        <section id="contact" className="dotted-background py-20 lg:py-32">
+        <section id={t("contact")} className="dotted-background py-20 lg:py-32">
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <h2 className="text-3xl font-bold mb-4">{tc("title")}</h2>
             <p className="text-lg mb-8 text-muted-foreground">

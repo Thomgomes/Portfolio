@@ -7,8 +7,9 @@
     "contact": "Contato"
   },
   "home": {
-    "title": "Thom Gomes",
-    "subtitle": "Desenvolvedor Front-end",
+    "welcome": "Bem-vindo!",
+    "title": "Desenvolvedor web",
+    "subtitle": "Thom Gomes",
     "description": "I create beautiful and functional digital experiences.",
     "cvbutton": "Baixar CV",
     "aboutbutton": "Saiba sobre mim"
