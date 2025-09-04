@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <main>
       <Header />
-      <section className="relative w-full min-h-8/12 overflow-hidden bg-gradient-to-br from-background to-background-alt">
+      <section className="relative w-full min-h-8/12 overflow-hidden bg-gradient-to-br from-background to-background-alt transition-colors duration-200">
         <Line position="bottom" />
 
         <section className="container mx-auto px-4 h-screen flex items-center justify-between">
@@ -24,7 +24,7 @@ export default function HomePage() {
             >
               {t('title')}
             </h1>
-            <p className="mt-4 text-lg text-gray-300 lg:text-xl">
+            <p className="mt-4 text-lg text-foreground lg:text-xl">
               {t('subtitle')}
             </p>
             <div className="mt-10 flex flex-col gap-4 lg:flex-row">
