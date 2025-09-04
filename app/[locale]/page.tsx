@@ -75,23 +75,23 @@ export default function HomePage() {
           <div className="container mx-auto px-4 h-screen flex flex-col md:flex-row items-center justify-center lg:justify-between">
             <div className="w-full">
               <div className="flex flex-col items-center">
-                <h1 className="title-gradient mt-4 font-semibold text-4xl lg:text-6xl whitespace-nowrap">
+                <h1 className="title-gradient mt-4 font-semibold text-3xl md:text-4xl lg:text-6xl r text-left sm:whitespace-nowrap">
                   {th("title")}
                 </h1>
-                <h3 className="mt-4 text-2xl font-semibold text-center text-foreground lg:text-xl">
+                <h3 className="mt-4 text-lg md:text-2xl font-semibold text-center text-foreground lg:text-xl">
                   {th("description")}
                 </h3>
               </div>
               <div className="mt-10 flex justify-center gap-6">
-                <Button asChild size="lg" className="gap-2 py-6 font-semibold text-lg">
+                <Button asChild size="lg" className="gap-2 lg:py-6 font-semibold lg:text-lg">
                   <a href="/thom-gomes-cv.pdf" download>
                     <ArrowBigDownDash className=""/>
                     {th("cvbutton")}
                   </a>
                 </Button>
-                <Button asChild size="lg" className="gap-2 py-6 font-semibold text-lg">
-                  <a href="/thom-gomes-cv.pdf" download>
-                    {th("aboutbutton")}
+                <Button asChild size="lg" className="gap-2 lg:py-6 font-semibold lg:text-lg">
+                  <a href={`#${t("contact")}`}>
+                    {th("contactbutton")}
                   </a>
                 </Button>
               </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
               <div className="lg:col-span-1 flex justify-center">
                 <div className="relative w-60 h-60 lg:w-72 lg:h-72">
                   <Image
-                    src="/images/thom2.jpg" // Lembre-se de colocar sua foto em /public/profile.png
+                    src="/images/thom2.jpg"
                     alt="Foto de Thom Gomes"
                     width={288}
                     height={288}
@@ -231,7 +231,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-center mb-12">
               {ts("title")}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
               {servicesList.map(({ key, Icon }) => (
                 <Card key={key}>
                   <CardHeader>

@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export default function Pray() {
   return (
-    <div className="scale-[0.7] md:scale-[0.85]">
+    <div className="scale-[0.7] lg:scale-[0.85]">
       <Card className="w-full max-w-2xl shadow-lg p-0 gap-0">
         {/* Cabeçalho estilizado para parecer uma janela de app */}
         <CardHeader className="flex flex-row items-center gap-2 bg-muted/50 px-4 py-4">
