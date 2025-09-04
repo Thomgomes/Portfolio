@@ -55,7 +55,7 @@ export default function HomePage() {
   const th = useTranslations("home");
   const ta = useTranslations("about");
   const tp = useTranslations("projects");
-  const tsrv = useTranslations("services");
+  const ts = useTranslations("services");
   const tc = useTranslations("contact");
   const tf = useTranslations("footer");
 
@@ -66,36 +66,41 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        <section id={t("home")} className="relative w-full min-h-8/12 overflow-hidden bg-gradient-to-br from-background to-background-alt transition-colors duration-200">
+        <section
+          id={t("home")}
+          className="relative w-full overflow-hidden bg-gradient-to-br from-background to-background-alt transition-colors duration-200"
+        >
           <Line position="bottom" />
 
-          <section className="container mx-auto px-4 h-screen flex items-center justify-between">
-            {/* Lado Esquerdo */}
-            <div className="z-10 w-full">
-              <h1 className="title-gradient mt-4 font-semibold text-4xl lg:text-6xl">
-                {th("title")}
-              </h1>
-              <p className="mt-4 text-lg text-foreground lg:text-xl">
-                {th("subtitle")}
-              </p>
-              <div className="mt-10 flex flex-col gap-4 lg:flex-row">
-                <Button asChild size="lg" className="gap-2">
+          <div className="container mx-auto px-4 h-screen flex flex-col md:flex-row items-center justify-center lg:justify-between">
+            <div className="w-full">
+              <div className="flex flex-col items-center">
+                <h1 className="title-gradient mt-4 font-semibold text-4xl lg:text-6xl whitespace-nowrap">
+                  {th("title")}
+                </h1>
+                <h3 className="mt-4 text-2xl font-semibold text-center text-foreground lg:text-xl">
+                  {th("description")}
+                </h3>
+              </div>
+              <div className="mt-10 flex justify-center gap-6">
+                <Button asChild size="lg" className="gap-2 py-6 font-semibold text-lg">
                   <a href="/thom-gomes-cv.pdf" download>
-                    <ArrowBigDownDash />
+                    <ArrowBigDownDash className=""/>
                     {th("cvbutton")}
+                  </a>
+                </Button>
+                <Button asChild size="lg" className="gap-2 py-6 font-semibold text-lg">
+                  <a href="/thom-gomes-cv.pdf" download>
+                    {th("aboutbutton")}
                   </a>
                 </Button>
               </div>
             </div>
 
-            {/* Lado Direito */}
-            {/* <div className="w-full">
-              <ProjectShowcase route="paradigm.com/apparel" />
-            </div> */}
-            <div className="w-full">
+            <div className="md:w-full">
               <Pray />
             </div>
-          </section>
+          </div>
         </section>
 
         <section
@@ -138,7 +143,10 @@ export default function HomePage() {
         </section>
 
         {/* Section: Projects */}
-        <section id={t("projects")} className="dotted-background py-20 lg:py-32">
+        <section
+          id={t("projects")}
+          className="dotted-background py-20 lg:py-32"
+        >
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-3xl font-bold text-center mb-4">
               {tp("title")}
@@ -221,17 +229,19 @@ export default function HomePage() {
           <ParticleBackground parentRef={servicesSectionRef} />
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl font-bold text-center mb-12">
-              {tsrv("title")}
+              {ts("title")}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {servicesList.map(({ key, Icon }) => (
                 <Card key={key}>
                   <CardHeader>
                     <Icon className="h-12 w-12 mx-auto mb-4 text-primary" />
-                    <CardTitle>{tsrv(`${key}.title`)}</CardTitle>
+                    <CardTitle>{ts(`${key}.title`)}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>{tsrv(`${key}.description`)}</CardDescription>
+                    <CardDescription>
+                      {ts(`${key}.description`)}
+                    </CardDescription>
                   </CardContent>
                 </Card>
               ))}
