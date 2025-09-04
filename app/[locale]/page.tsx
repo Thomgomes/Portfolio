@@ -26,6 +26,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useRef } from "react";
+import Pray from "@/components/pray";
 
 const skills = [
   "TypeScript",
@@ -75,8 +76,11 @@ export default function HomePage() {
             </div>
 
             {/* Lado Direito */}
-            <div className="w-full">
+            {/* <div className="w-full">
               <ProjectShowcase route="paradigm.com/apparel" />
+            </div> */}
+            <div className="w-full">
+              <Pray />
             </div>
           </section>
         </section>
@@ -88,7 +92,7 @@ export default function HomePage() {
               <div className="lg:col-span-1 flex justify-center">
                 <div className="relative w-60 h-60 lg:w-72 lg:h-72">
                   <Image
-                    src="/profile.png" // Lembre-se de colocar sua foto em /public/profile.png
+                    src="/images/thom2.jpg" // Lembre-se de colocar sua foto em /public/profile.png
                     alt="Foto de Thom Gomes"
                     width={288}
                     height={288}
