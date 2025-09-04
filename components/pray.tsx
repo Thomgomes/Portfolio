@@ -17,14 +17,14 @@
 //     Assim como nós colocamos o ponto e vírgula esquecido;
 //     E não nos deixeis errar a indentação.
 //     Mas livrai-nos das funções recursivas,
-//     A main(). 
+//     A main().
 //   \`;
 
 // export default holyPrayer;
 // `}
 //         </code>
 //       </pre>
-      
+
 //     </div>
 //   );
 // }
@@ -46,77 +46,69 @@ export default function Pray() {
           {/* Título do arquivo */}
           <p className="text-sm text-muted-foreground">dialog/pray.ts</p>
         </CardHeader>
-        
+
         <CardContent className="p-4 bg-background-alt">
           <pre className="overflow-x-auto text-sm">
             <code>
               {/* Usamos <span> para colorir partes específicas do código */}
-              <span className="text-primary-light">const</span>{' '}
-              <span className="text-foreground">holyPrayer</span>{' '}
-              <span className="text-primary-light">=</span>{' '}
+              <span className="text-primary-light">const</span>{" "}
+              <span className="text-foreground">holyPrayer</span>{" "}
+              <span className="text-primary-light">=</span>{" "}
               <span className="text-pray">`</span>
               <br />
-              {'  '}
-              <span className="text-pray">
-                Código nosso que estás em C,
-              </span>
+              {"  "}
+              <span className="text-pray">Código nosso que estás em C,</span>
               <br />
-              {'  '}
-              <span className="text-pray">
-                Santificado seja vós, Console.
-              </span>
+              {"  "}
+              <span className="text-pray">Santificado seja vós, Console.</span>
               <br />
-              {'  '}
-              <span className="text-pray">
-                Venha a nós o vosso array,
-              </span>
+              {"  "}
+              <span className="text-pray">Venha a nós o vosso array,</span>
               <br />
-              {'  '}
+              {"  "}
               <span className="text-pray">E seja feita, sim, </span>
-              <span className="text-primary/90">{'{'}</span>
+              <span className="text-primary/90">{"{"}</span>
               <span className="text-foreground">vossa chave</span>
-              <span className="text-primary/90">{'}'}</span>
+              <span className="text-primary/90">{"}"}</span>
               <span className="text-pray">.</span>
               <br />
-              {'  '}
+              {"  "}
               <span className="text-pray">Assim no </span>
               <span className="text-primary-light">if</span>
-              <span className="text-pray">{'{'}</span>
-              <span className="text-pray">{'}'}</span>
+              <span className="text-pray">{"{"}</span>
+              <span className="text-pray">{"}"}</span>
               <span className="text-pray"> como no </span>
               <span className="text-primary-light">else</span>
-              <span className="text-pray">{'{'}</span>
-              <span className="text-pray">{'}'}</span>
+              <span className="text-pray">{"{"}</span>
+              <span className="text-pray">{"}"}</span>
               <span className="text-pray">,</span>
               <br />
-              {'  '}
+              {"  "}
               <span className="text-pray">O </span>
               <span className="text-primary-light">for</span>
               <span className="text-pray">
                 (nosso; de cada dia; nos dai hoje++).
               </span>
               <br />
-              {'  '}
-              <span className="text-pray">
-                Debugai as nossas sentenças,
-              </span>
+              {"  "}
+              <span className="text-pray">Debugai as nossas sentenças,</span>
               <br />
-              {'  '}
+              {"  "}
               <span className="text-pray">
                 Assim como nós colocamos o ponto e vírgula esquecido;
               </span>
               <br />
-              {'  '}
+              {"  "}
               <span className="text-pray">
                 E não nos deixeis errar a indentação.
               </span>
               <br />
-              {'  '}
+              {"  "}
               <span className="text-pray">
                 Mas livrai-nos das funções recursivas,
               </span>
               <br />
-              {'  '}
+              {"  "}
               <span className="text-foreground">A main</span>
               <span className="text-muted-foreground">()</span>
               <span className="text-pray">.</span>
@@ -125,7 +117,7 @@ export default function Pray() {
               <span className="text-muted-foreground">;</span>
               <br />
               <br />
-              <span className="text-primary-light">export default</span>{' '}
+              <span className="text-primary-light">export default</span>{" "}
               <span className="text-foreground">holyPrayer</span>
               <span className="text-muted-foreground">;</span>
             </code>
