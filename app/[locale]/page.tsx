@@ -32,12 +32,12 @@ export default function HomePage() {
   return (
     <main>
       <Header />
-      <div className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      <section className="relative w-full min-h-8/12 overflow-hidden bg-gradient-to-br from-background to-background-alt">
         <Line position="bottom" />
 
-        <div className="container mx-auto px-4 grid gap-20 py-24 lg:grid-cols-2 lg:gap-10 lg:py-44">
+        <section className="container mx-auto px-4 h-screen flex items-center justify-between">
           {/* Lado Esquerdo */}
-          <div className="z-10 lg:pt-10">
+          <div className="z-10 w-full">
             <h1
              
               className="title-gradient mt-4 font-semibold text-4xl lg:text-6xl"
@@ -59,26 +59,24 @@ export default function HomePage() {
           </div>
 
           {/* Lado Direito */}
-          <div className="relative flex flex-col">
+          <div className="w-full">
             <ProjectShowcase route="paradigm.com/apparel" />
-
-            <Pray />
           </div>
-        </div>
-      </div>
-      <section className="relative min-h-screen w-full overflow-hidden text-foreground flex flex-col items-center justify-center p-8">
-        <ParticleBackground/>
-        <div className="text-center space-y-4">
-          <h1 className="text-3xl font-bold">Teste de Tema</h1>
-          <p className="text-muted-foreground">
-            Clique no botão abaixo para alternar entre o modo claro e escuro. a
-          </p>
-          <p>O fundo e a cor do texto devem mudar.</p>
-          <div className="mt-4">
-            <ThemeToggleButton />
-          </div>
-        </div>
+        </section>
       </section>
     </main>
+      // <section className="relative min-h-screen w-full overflow-hidden text-foreground flex flex-col items-center justify-center p-8">
+      //   <ParticleBackground/>
+      //   <div className="text-center space-y-4">
+      //     <h1 className="text-3xl font-bold">Teste de Tema</h1>
+      //     <p className="text-muted-foreground">
+      //       Clique no botão abaixo para alternar entre o modo claro e escuro. a
+      //     </p>
+      //     <p>O fundo e a cor do texto devem mudar.</p>
+      //     <div className="mt-4">
+      //       <ThemeToggleButton />
+      //     </div>
+      //   </div>
+      // </section>
   );
 }
