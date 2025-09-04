@@ -7,6 +7,7 @@ import ProjectShowcase from "@/components/project-showcase";
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
 import TitleGradient from "@/components/title-gradient";
 import ParticleBackground from "@/components/particle-background";
+import { ArrowBigDownDash } from "lucide-react";
 
 const ArrowIcon = () => (
   <svg
@@ -31,30 +32,27 @@ export default function HomePage() {
   return (
     <main>
       <Header />
-      <div className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-gray-800 to-gray-950">
+      <div className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
         <Line position="bottom" />
 
         <div className="container mx-auto px-4 grid gap-20 py-24 lg:grid-cols-2 lg:gap-10 lg:py-44">
           {/* Lado Esquerdo */}
-          <div className="absolute top-4 right-4">
-            <ThemeToggleButton />
-          </div>
           <div className="z-10 lg:pt-10">
-            <TitleGradient
-              value="h1"
-              className="mt-4 text-4xl font-semibold tracking-tight text-transparent lg:text-6xl bg-clip-text"
+            <h1
+             
+              className="title-gradient mt-4 font-semibold text-4xl lg:text-6xl"
             >
               {t('title')}
-            </TitleGradient>
+            </h1>
             <p className="mt-4 text-lg text-gray-300 lg:text-xl">
               {t('subtitle')}
             </p>
             <div className="mt-10 flex flex-col gap-4 lg:flex-row">
               <a
                 href="#access"
-                className="group inline-flex items-center justify-center gap-2 rounded-lg bg-white px-5 py-3 text-base font-medium text-surface-900 transition hover:bg-gray-200"
+                className="group flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-5 py-3 text-base font-medium text-surface-900 transition hover:bg-primary-light hover:text-primary-light-foreground"
               >
-                <ArrowIcon />
+                <ArrowBigDownDash />
                 {t('cvbutton')}
               </a>
             </div>

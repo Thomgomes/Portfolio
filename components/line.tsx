@@ -8,19 +8,13 @@ export function Line({position}: LineProps) {
             <>
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute left-1/2 z-0 h-24 w-[120%] -translate-x-1/2 rotate-2 opacity-40 -top-10"
-                    style={{
-                        background:
-                            "linear-gradient(90deg, #121217 0%, #0075ad 50%, #121217 100%)",
-                    }}
+                    className="line pointer-events-none absolute left-1/2 z-0 h-24 w-[120%] -translate-x-1/2 rotate-2 opacity-70 -top-10"
+                    
                 />
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute left-1/2 z-0 h-24 w-[120%] -translate-x-1/2 rotate-2 opacity-40 -bottom-10"
-                    style={{
-                        background:
-                            "linear-gradient(90deg, #121217 0%, #0075ad 50%, #121217 100%)",
-                    }}
+                    className="line pointer-events-none absolute left-1/2 z-0 h-24 w-[120%] -translate-x-1/2 rotate-2 opacity-70 -bottom-10"
+                    
                 />
             </>
         )
@@ -29,11 +23,8 @@ export function Line({position}: LineProps) {
     return (
         <div
               aria-hidden="true"
-              className={`pointer-events-none absolute left-1/2 z-0 h-24 w-[120%] -translate-x-1/2 rotate-2 opacity-40 ${position === "bottom" ? "-bottom-10" : "-top-10"}`}
-              style={{
-                background:
-                  "linear-gradient(90deg, #121217 0%, #0075ad 50%, #121217 100%)",
-              }}
+              className={`line pointer-events-none absolute left-1/2 z-0 h-24 w-[120%] -translate-x-1/2 rotate-2 opacity-70 ${position === "bottom" ? "-bottom-10" : "-top-10"}`}
+              
             />
     )
 }

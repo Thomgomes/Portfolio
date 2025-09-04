@@ -11,6 +11,11 @@
   --primary: #dd5a25;
   --primary-foreground: #ffffff;
 
+  --primary-light: #f08054;
+  --primary-light-foreground: #0d0d0d;
+
+  --primary-heavy: #b5451d;
+
   --secondary: #71717a;
   --secondary-foreground: #ffffff;
 
@@ -66,6 +71,12 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
 
+  --color-primary-light: var(--primary-light);
+  --color-primary-light-foreground: var(--primary-light-foreground);
+
+  --color-primary-heave: var(--primary);
+  --color-primary-heave-foreground: var(--primary-foreground);
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
 
@@ -118,4 +129,25 @@ h3 {
     transparent 0
   );
   background-size: var(--dot-spacing) var(--dot-spacing);
+}
+
+.title-gradient {
+  background: radial-gradient(
+    138.06% 1036.51% at 95.25% -2.54%,
+    #ff9a70 14.06%,
+    #ff7a45 51.02%,
+    var(--accent) 79.09%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.line {
+  background: linear-gradient(
+    90deg,
+    var(--primary-light) 0%,
+    var(--primary) 50%,
+    var(--primary-heavy) 100%
+  );
 }
