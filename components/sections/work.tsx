@@ -16,41 +16,23 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: 'Eduplaytion',
-    company: 'Norway',
-    location: 'Norway',
-    period: 'Feb 2022',
-    description: 'Worked in the development of the Numetry Teacher Panel, Parent Panel, and other internal applications',
+    title: 'Lorem',
+    company: 'Ipsum',
+    location: 'Teste',
+    period: 'Feb 2023',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     roles: ['Frontend Developer'],
     type: 'work'
   },
   {
-    title: 'GDS TEC',
-    company: 'Brazil',
-    location: 'Brazil',
-    period: 'Sep 2021 - Jan 2022',
-    description: 'Worked as the leader front-end and mobile developer in projects related to sports gambling and food shopping apps (similar to iFood and Uber Eats)',
-    roles: ['Web and Mobile Development Leader'],
+    title: 'Teste',
+    company: 'Empresa X',
+    location: 'Brasil',
+    period: 'Jan 2022 - Fev 2023',
+    description: 'Desenvolvimento de interfaces responsivas e otimização de performance em aplicações web.',
+    roles: ['Frontend Developer', 'UI/UX Designer'],
     type: 'work'
   },
-  {
-    title: 'Leap Studios',
-    company: 'Brazil',
-    location: 'Brazil',
-    period: 'Jul 2021 - Jan 2022',
-    description: 'I was one of the founders and also the creative director. My main role was to organize the tasks between the teams (developers, writers, marketing, and design) and also to be in front of the negotiations happening between the company and the clients.',
-    roles: ['Creative Director'],
-    type: 'work'
-  },
-  {
-    title: 'Quacks Interatividade Digital',
-    company: 'Brazil',
-    location: 'Brazil',
-    period: 'Mar 2020 - Nov 2020',
-    description: 'I was the main front-end developer and also worked on the backend. My role was to develop static and dynamic landing pages, e-commerce apps, and mobile apps, and also did participation on educational games (Aula Pratik)',
-    roles: ['FullStack Developer'],
-    type: 'work'
-  }
 ];
 
 export default function WorkTimeline() {
