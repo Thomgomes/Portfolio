@@ -38,7 +38,7 @@ export function ThemeToggleButton() {
         aria-label="Alternar tema"
       >
         {isDark ? (
-          <Moon className="w-5 h-5 text-fuchsia-600 hover:text-fuchsia-800 transition-colors duration-200" />
+          <Moon className="w-5 h-5 text-fuchsia-300/60 hover:text-fuchsia-800 transition-colors duration-200" />
         ) : (
           <Sun className="w-5 h-5 text-amber-500 hover:text-primary transition-colors duration-200" />
         )}

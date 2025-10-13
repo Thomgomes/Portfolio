@@ -4,12 +4,12 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../u
 import { Menu } from "lucide-react";
 import Image from "next/image";
 
-export default function Header() {
-  const t = useTranslations("header");
-  const navLinks = ["home", "about", "projects", "services", "contact"];
+export default function Nav() {
+  const t = useTranslations("nav");
+  const navLinks = ["home", "projects", "about"];
 
   return (
-    <header className="z-10 w-full fixed top-0 border-b border-[#3333] backdrop-blur-sm bg-background/30">
+    <header className="z-90 w-full fixed top-0 border-b border-[#3333] backdrop-blur-sm bg-background/30">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <a href="https://github.com/Thomgomes" target="_blank" className="text-3xl font-bold">
