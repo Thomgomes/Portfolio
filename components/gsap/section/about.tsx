@@ -32,7 +32,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8t dotted-background">
+    <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 dotted-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
