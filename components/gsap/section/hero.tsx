@@ -1,41 +1,62 @@
 'use client';
 import { motion } from 'framer-motion';
+import { ArrowDown, Sparkles } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen flex items-center justify-center px-8">
-      <div className="max-w-7xl w-full">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
+      <div className="absolute inset-0 hero-gradient-radial" />
+      <div 
+        className="glow-orb w-[500px] h-[500px] top-20 left-10"
+        style={{ 
+          background: 'radial-gradient(circle, rgba(164, 22, 26, 0.4) 0%, transparent 70%)',
+          animationDelay: '0s'
+        }}
+      />
+      <div 
+        className="glow-orb w-[400px] h-[400px] bottom-20 right-20"
+        style={{ 
+          background: 'radial-gradient(circle, rgba(215, 32, 40, 0.3) 0%, transparent 70%)',
+          animationDelay: '10s'
+        }}
+      />
+      <div className="max-w-7xl w-full relative z-10">
         {/* Nome e Ano */}
         <motion.div
-          className="flex justify-between items-start mb-12 text-sm text-gray-400"
+          className="flex justify-between items-start mb-8 sm:mb-12 text-xs sm:text-sm text-muted-foreground"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <span>Larissa Ricarte</span>
+          <span>Seu Nome</span>
           <span>2025</span>
         </motion.div>
 
         {/* Título Principal */}
         <motion.div
-          className="relative"
+          className="relative mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h1 className="text-[8rem] md:text-[12rem] lg:text-[15rem] font-bold leading-none tracking-tight">
+          <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] xl:text-[15rem] font-bold leading-none tracking-tight text-foreground">
             portfolio
           </h1>
           
           {/* Subtítulo sobreposto */}
-          <div className="absolute right-0 bottom-8 text-right">
-            <p className="text-xl md:text-2xl text-gray-400">UX/UI Design</p>
+          <div className="absolute right-0 -bottom-4 sm:bottom-4 md:bottom-8 text-right">
+            <div className="flex items-center gap-2 justify-end">
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-pray" />
+              <p className="text-base sm:text-xl md:text-2xl text-gradient-blue font-semibold">
+                UX/UI Design
+              </p>
+            </div>
           </div>
         </motion.div>
 
         {/* Descrição */}
         <motion.p
-          className="mt-8 text-lg text-gray-400 max-w-2xl"
+          className="mt-12 sm:mt-16 md:mt-20 text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -44,18 +65,25 @@ export default function HeroSection() {
           excepcionais através de design elegante e código limpo.
         </motion.p>
 
-        {/* CTA Button */}
+        {/* CTA Buttons */}
         <motion.div
-          className="mt-12"
+          className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          <button className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">
+          <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary-light transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
             Ver Projetos
+            <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-1 transition-transform" />
+          </button>
+          <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-border hover:border-primary text-foreground hover:text-primary font-semibold rounded-full transition-all duration-300">
+            Entre em Contato
           </button>
         </motion.div>
       </div>
+
+      {/* Decorative gradient overlay */}
+      <div className="absolute inset-0 gradient-overlay pointer-events-none -z-10" />
     </section>
   );
 }

@@ -1,70 +1,115 @@
 @import "tailwindcss";
 
 :root {
+  /* Backgrounds base */
   --background: #fafafa;
   --background-alt: #f4f4f5;
   --foreground: #1c1c1c;
 
+  /* Gradient colors - REMOVIDOS os azuis, agora usa vermelho/cinza */
+  --gradient-start: #fafafa;
+  --gradient-middle: #f4e8e9;
+  --gradient-end: #edd8da;
+  
+  /* Hero gradient background - COM VERMELHO */
+  --hero-gradient-from: #ffffff;
+  --hero-gradient-via: #fce8e9;
+  --hero-gradient-to: #f8d3d6;
+
+  /* Cards */
   --card: #ffffff;
   --card-foreground: #1c1c1c;
 
-  --primary: #dd5a25;
+  /* Primary colors - Vermelho #A4161A e derivados */
+  --primary: #A4161A;
   --primary-foreground: #ffffff;
+  --primary-light: #D72028;
+  --primary-light-foreground: #ffffff;
+  --primary-heavy: #7D1115;
+  
+  /* Variações extras do vermelho */
+  --primary-lighter: #FF3B44;
+  --primary-darker: #5A0C0F;
 
-  --primary-light: #f08054;
-  --primary-light-foreground: #0d0d0d;
-
-  --primary-heavy: #b5451d;
-
+  /* Secondary */
   --secondary: #71717a;
   --secondary-foreground: #ffffff;
 
+  /* Accent colors */
   --pray: #4f39f6;
+  --accent: #A4161A;
+  --accent-foreground: #ffffff;
 
+  /* Muted */
   --muted: #f0f0f0;
   --muted-foreground: #666666;
 
+  /* Border */
   --border: #e0e0e0;
 
-  --accent: #dd5a25;
-  --accent-foreground: #ffffff;
-
-  --dot-color: rgba(0, 0, 0, 0.08);
+  /* Dot pattern */
+  --dot-color: rgba(164, 22, 26, 0.06);
   --dot-size: 1.1px;
   --dot-spacing: 36px;
 }
 
 .dark {
+  /* Backgrounds dark */
   --background: #0d0d0d;
   --background-alt: #1c1c1c;
   --foreground: #e2e8f0;
 
+  /* Gradient colors dark - COM VERMELHO */
+  --gradient-start: #0d0d0d;
+  --gradient-middle: #1a0f10;
+  --gradient-end: #2d1516;
+  
+  /* Hero gradient dark - COM VERMELHO */
+  --hero-gradient-from: #0d0d0d;
+  --hero-gradient-via: #1c1213;
+  --hero-gradient-to: #2a1718;
+
+  /* Cards dark */
   --card: #1c1c1c;
   --card-foreground: #e2e8f0;
 
-  --primary: #dd5a25;
+  /* Primary colors dark - Vermelho mantém vibrante */
+  --primary: #D72028;
   --primary-foreground: #ffffff;
+  --primary-light: #FF3B44;
+  --primary-light-foreground: #ffffff;
+  --primary-heavy: #A4161A;
+  
+  /* Variações extras */
+  --primary-lighter: #FF5A61;
+  --primary-darker: #7D1115;
 
+  /* Secondary dark */
   --secondary: #a1a1aa;
   --secondary-foreground: #0d0d0d;
 
+  /* Accent dark */
   --pray: #a69cf2;
+  --accent: #D72028;
+  --accent-foreground: #ffffff;
 
+  /* Muted dark */
   --muted: #2a2a2a;
   --muted-foreground: #a1a1aa;
 
+  /* Border dark */
   --border: #2a2a2a;
 
-  --accent: #dd5a25;
-  --accent-foreground: #ffffff;
-
-  --dot-color: rgba(221, 90, 37, 0.1);
+  /* Dot pattern dark */
+  --dot-color: rgba(215, 32, 40, 0.08);
 }
 
 @theme inline {
+  /* Fonts */
   --font-sora: "Sora", "sans-serif";
   --font-Work-Sans: "Work Sans", "sans-serif";
 
+  /* Colors */
   --color-background: var(--background);
   --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
@@ -74,12 +119,11 @@
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-
   --color-primary-light: var(--primary-light);
   --color-primary-light-foreground: var(--primary-light-foreground);
-
-  --color-primary-heave: var(--primary);
-  --color-primary-heave-foreground: var(--primary-foreground);
+  --color-primary-heavy: var(--primary-heavy);
+  --color-primary-lighter: var(--primary-lighter);
+  --color-primary-darker: var(--primary-darker);
 
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -94,20 +138,23 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
 
+  /* Gradient colors */
+  --color-gradient-start: var(--gradient-start);
+  --color-gradient-middle: var(--gradient-middle);
+  --color-gradient-end: var(--gradient-end);
+
+  /* Hero gradient colors */
+  --color-hero-gradient-from: var(--hero-gradient-from);
+  --color-hero-gradient-via: var(--hero-gradient-via);
+  --color-hero-gradient-to: var(--hero-gradient-to);
+
+  /* Breakpoints */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
 
-  --radius-DEFAULT: 0.75rem;
-  --radius-sm: 0.5rem;
-  --radius-lg: 1rem;
-
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-
+  /* Radius */
   --radius-DEFAULT: 0.75rem;
   --radius-sm: 0.5rem;
   --radius-lg: 1rem;
@@ -125,6 +172,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Cursor customizado - esconde padrão */
+* {
+  cursor: none;
+}
+
+/* Reativa cursor em mobile e tablets */
+@media (max-width: 768px) {
+  * {
+    cursor: auto;
+  }
+}
+
+/* Background com dots */
 .dotted-background {
   background-color: var(--background-alt);
   background-image: radial-gradient(
@@ -135,23 +195,342 @@ body {
   background-size: var(--dot-spacing) var(--dot-spacing);
 }
 
-.title-gradient {
+/* Hero gradient background */
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--hero-gradient-from) 0%,
+    var(--hero-gradient-via) 50%,
+    var(--hero-gradient-to) 100%
+  );
+}
+
+/* Gradient radial alternativo para hero - COM VERMELHO */
+.hero-gradient-radial {
   background: radial-gradient(
-    138.06% 1036.51% at 95.25% -2.54%,
-    #ff9a70 14.06%,
-    #ff7a45 51.02%,
-    var(--accent) 79.09%
+    ellipse at top,
+    var(--gradient-start) 0%,
+    var(--gradient-middle) 40%,
+    var(--gradient-end) 60%,
+    var(--background) 80%
+  );
+}
+
+/* Hero gradient com efeito diagonal - NOVA OPÇÃO */
+.hero-gradient-diagonal {
+  background: linear-gradient(
+    135deg,
+    var(--background) 0%,
+    var(--gradient-middle) 50%,
+    var(--gradient-end) 100%
+  );
+}
+
+/* Title gradient com vermelho */
+.title-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary-lighter) 0%,
+    var(--primary) 50%,
+    var(--primary-heavy) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.line {
+/* Gradient vermelho vibrante */
+.title-gradient-vibrant {
+  background: radial-gradient(
+    138.06% 1036.51% at 95.25% -2.54%,
+    #FF5A61 14.06%,
+    var(--primary-light) 51.02%,
+    var(--primary) 79.09%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient vermelho suave para textos */
+.text-gradient-red {
   background: linear-gradient(
-    90deg,
+    135deg,
     var(--primary-light) 0%,
     var(--primary) 50%,
     var(--primary-heavy) 100%
   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Line gradient vermelho */
+.line {
+  background: linear-gradient(
+    90deg,
+    var(--primary-lighter) 0%,
+    var(--primary) 50%,
+    var(--primary-heavy) 100%
+  );
+}
+
+/* Line gradient vermelho escuro */
+.line-dark {
+  background: linear-gradient(
+    90deg,
+    var(--primary) 0%,
+    var(--primary-heavy) 50%,
+    var(--primary-darker) 100%
+  );
+}
+
+/* Card com gradient sutil no hover */
+.card-gradient-hover {
+  transition: all 0.3s ease;
+}
+
+.card-gradient-hover:hover {
+  background: linear-gradient(
+    135deg,
+    var(--card) 0%,
+    rgba(164, 22, 26, 0.05) 50%,
+    rgba(215, 32, 40, 0.08) 100%
+  );
+}
+
+.dark .card-gradient-hover:hover {
+  background: linear-gradient(
+    135deg,
+    var(--card) 0%,
+    rgba(215, 32, 40, 0.08) 50%,
+    rgba(255, 59, 68, 0.12) 100%
+  );
+}
+
+/* Background overlay gradient vermelho */
+.gradient-overlay {
+  position: relative;
+}
+
+.gradient-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(164, 22, 26, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dark .gradient-overlay::before {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(215, 32, 40, 0.12) 0%,
+    transparent 70%
+  );
+}
+
+/* Section gradient background com vermelho */
+.section-gradient {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(164, 22, 26, 0.03) 20%,
+    rgba(215, 32, 40, 0.05) 50%,
+    rgba(164, 22, 26, 0.03) 80%,
+    transparent 100%
+  );
+}
+
+.dark .section-gradient {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(215, 32, 40, 0.05) 20%,
+    rgba(255, 59, 68, 0.08) 50%,
+    rgba(215, 32, 40, 0.05) 80%,
+    transparent 100%
+  );
+}
+
+/* Animação de gradiente vermelho */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    -45deg,
+    var(--primary-lighter),
+    var(--primary),
+    var(--primary-heavy),
+    var(--primary-darker)
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Animated gradient com cinza e vermelho */
+.animated-gradient-subtle {
+  background: linear-gradient(
+    -45deg,
+    var(--background),
+    var(--gradient-middle),
+    var(--gradient-end),
+    var(--muted)
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 20s ease infinite;
+}
+
+/* Glassmorphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-effect {
+  background: rgba(28, 28, 28, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow effect para vermelho */
+.glow-red {
+  box-shadow: 0 0 20px rgba(164, 22, 26, 0.3),
+              0 0 40px rgba(164, 22, 26, 0.2),
+              0 0 60px rgba(164, 22, 26, 0.1);
+}
+
+.dark .glow-red {
+  box-shadow: 0 0 20px rgba(215, 32, 40, 0.4),
+              0 0 40px rgba(215, 32, 40, 0.3),
+              0 0 60px rgba(215, 32, 40, 0.2);
+}
+
+/* Button com efeito de brilho vermelho */
+.button-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.button-glow:hover::before {
+  transform: translateX(100%);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.5' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  animation: grain-animation 8s steps(10) infinite;
+}
+
+.dark .grain-overlay {
+  opacity: 0.06;
+}
+
+@keyframes grain-animation {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+/* Frosted Glass Effect - Para modais e cards */
+.frosted-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+}
+
+.dark .frosted-glass {
+  background: rgba(28, 28, 28, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Frosted glass mais intenso */
+.frosted-glass-heavy {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .frosted-glass-heavy {
+  background: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(40px) saturate(150%);
+  -webkit-backdrop-filter: blur(40px) saturate(150%);
+}
+
+/* Glow effect tipo Osmo */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.6;
+  animation: float-orb 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float-orb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
 }

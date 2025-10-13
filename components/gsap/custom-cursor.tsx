@@ -6,14 +6,22 @@ export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Detectar se é mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
       setIsVisible(true);
     };
 
-    // Detectar hover em elementos interativos
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('a, button')) {
@@ -23,34 +31,37 @@ export default function CustomCursor() {
       }
     };
 
-    // Esconder cursor quando mouse sai da janela
     const handleMouseLeave = () => {
       setIsVisible(false);
     };
 
-    // Mostrar cursor quando mouse entra na janela
     const handleMouseEnter = () => {
       setIsVisible(true);
     };
 
-    window.addEventListener('mousemove', updateMousePosition);
-    window.addEventListener('mouseover', handleMouseOver);
-    document.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('mouseenter', handleMouseEnter);
+    if (!isMobile) {
+      window.addEventListener('mousemove', updateMousePosition);
+      window.addEventListener('mouseover', handleMouseOver);
+      document.addEventListener('mouseleave', handleMouseLeave);
+      document.addEventListener('mouseenter', handleMouseEnter);
+    }
 
     return () => {
+      window.removeEventListener('resize', checkMobile);
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mouseenter', handleMouseEnter);
     };
-  }, []);
+  }, [isMobile]);
+
+  // Não renderizar em mobile
+  if (isMobile) return null;
 
   return (
     <AnimatePresence>
       {isVisible && (
         <>
-          {/* Cursor interno (ponto) */}
           <motion.div
             className="fixed top-0 left-0 w-2 h-2 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
             initial={{ opacity: 0, scale: 0 }}
@@ -69,7 +80,6 @@ export default function CustomCursor() {
             }}
           />
           
-          {/* Cursor externo (círculo) */}
           <motion.div
             className="fixed top-0 left-0 w-10 h-10 border-2 border-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
             initial={{ opacity: 0, scale: 0 }}
