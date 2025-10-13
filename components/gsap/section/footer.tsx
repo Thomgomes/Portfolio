@@ -64,7 +64,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-border pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
-            © 2025 Thom Gomes. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Thom Gomes. Todos os direitos reservados.
           </p>
           
           {/* Botão voltar ao topo */}

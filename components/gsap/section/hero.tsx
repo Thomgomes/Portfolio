@@ -27,8 +27,8 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <span>Seu Nome</span>
-          <span>2025</span>
+          <span>Thom Gomes</span>
+          <span>{new Date().getFullYear()}</span>
         </motion.div>
 
         {/* Título Principal */}

@@ -2,7 +2,6 @@
 import { useTranslations } from "next-intl";
 
 import Header from "@/components/layout/header";
-import { Line } from "@/components/line";
 import ParticleBackground from "@/components/particle-background";
 import {
   ArrowBigDownDash,
@@ -28,7 +27,6 @@ import {
 } from "@/components/ui/card";
 import { useRef } from "react";
 import Pray from "@/components/pray";
-import IntroAnimation from "@/components/intro-animation";
 
 const skills = [
   "TypeScript",
@@ -65,14 +63,12 @@ export default function HomePage() {
 
   return (
     <>
-      <IntroAnimation />
       <Header />
       <main>
         <section
           id={t("home")}
           className="relative w-full overflow-hidden bg-gradient-to-br from-background to-background-alt transition-colors duration-200"
         >
-          <Line position="bottom" />
 
           <div className="container mx-auto px-4 h-screen flex flex-col md:flex-row items-center justify-center lg:justify-between">
             <div className="w-full">
