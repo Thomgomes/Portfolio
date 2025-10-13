@@ -5,16 +5,15 @@ import { ArrowDown, Sparkles } from 'lucide-react';
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
-      <div className="absolute inset-0 hero-gradient-radial" />
       <div 
-        className="glow-orb w-[500px] h-[500px] top-20 left-10"
+        className="glow-orb w-[1800px] h-[700px] top-20 left-10"
         style={{ 
-          background: 'radial-gradient(circle, rgba(164, 22, 26, 0.4) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(164, 22, 26, 0.4) 0%, transparent 80%)',
           animationDelay: '0s'
         }}
       />
       <div 
-        className="glow-orb w-[400px] h-[400px] bottom-20 right-20"
+        className="glow-orb w-[1400px] h-[300px] bottom-20 lg:right-80 md:right-40 right-20"
         style={{ 
           background: 'radial-gradient(circle, rgba(215, 32, 40, 0.3) 0%, transparent 70%)',
           animationDelay: '10s'

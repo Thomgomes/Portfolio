@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, Work_Sans } from "next/font/google";
+import { Sora, Work_Sans, Space_Grotesk, Geist } from "next/font/google";
 import "./globals.css";
 
 const sora = Sora({
@@ -11,6 +11,20 @@ const workSans = Work_Sans({
   subsets: ["latin"],
   variable: "--font-Work-Sans",
 })
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+});
+
+const geist = Geist({
+  subsets: ['latin'],
+  variable: '--font-geist',
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: "Thom Gomes",
@@ -28,7 +42,7 @@ export default function RootLayout({
   return (
     <html>
       <body
-        className={`${sora.variable} ${workSans.variable} antialiased`}
+        className={`${sora.variable} ${workSans.variable} ${geist.variable} ${spaceGrotesk.variable} antialiased`}
       >
          {children}
       </body>

@@ -108,6 +108,8 @@
   /* Fonts */
   --font-sora: "Sora", "sans-serif";
   --font-Work-Sans: "Work Sans", "sans-serif";
+  --font-geist: "Geist", "sans-serif";
+  --font-space-grotesk: "Space Grotesk", "sans-serif";
 
   /* Colors */
   --color-background: var(--background);
@@ -167,9 +169,15 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sora);
+  font-family: var(--font-geist);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 /* Cursor customizado - esconde padrão */
@@ -518,7 +526,7 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.6;
+  opacity: 0.7;
   animation: float-orb 20s ease-in-out infinite;
   pointer-events: none;
 }
@@ -528,7 +536,7 @@ body {
     transform: translate(0, 0) scale(1);
   }
   33% {
-    transform: translate(30px, -50px) scale(1.1);
+    transform: translate(30px, -50px) scale(1.2);
   }
   66% {
     transform: translate(-20px, 20px) scale(0.9);
