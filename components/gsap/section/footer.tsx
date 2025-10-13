@@ -1,5 +1,5 @@
 'use client';
-import { Github, Linkedin, Twitter, Mail, ArrowUp, Instagram } from 'lucide-react';
+import { Github, Linkedin, ArrowUp, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = () => {
