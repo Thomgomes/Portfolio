@@ -1,8 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Code2, Palette, Zap, Users } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function AboutSection() {
+  const t = useTranslations('about');
+  
   const skills = [
     'React', 'Next.js', 'TypeScript', 'Node.js',
     'Tailwind CSS', 'Framer Motion', 'MongoDB', 'PostgreSQL'
@@ -11,30 +14,25 @@ export default function AboutSection() {
   const highlights = [
     { 
       icon: Code2, 
-      title: 'Clean Code', 
-      description: 'Código limpo e manutenível' 
+      key: 'cleanCode'
     },
     { 
       icon: Palette, 
-      title: 'Design', 
-      description: 'Interfaces elegantes' 
+      key: 'design'
     },
     { 
       icon: Zap, 
-      title: 'Performance', 
-      description: 'Otimização máxima' 
+      key: 'performance'
     },
     { 
       icon: Users, 
-      title: 'UX Focus', 
-      description: 'Centrado no usuário' 
+      key: 'uxFocus'
     }
   ];
 
   return (
     <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 dotted-background">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,14 +41,12 @@ export default function AboutSection() {
           className="mb-12 sm:mb-16"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-foreground">
-            Sobre <span className="title-gradient">Mim</span>
+            {t('title')} <span className="title-gradient">{t('titleHighlight')}</span>
           </h2>
           <div className="line h-1 w-24 rounded-full" />
         </motion.div>
 
-        {/* Grid principal */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-12 lg:mb-20">
-          {/* Lado esquerdo - Sobre */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,18 +54,13 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-4 sm:mb-6">
-              Sou um desenvolvedor full stack apaixonado por criar experiências 
-              digitais que fazem a diferença. Com expertise em desenvolvimento 
-              web e mobile, transformo ideias em produtos escaláveis e elegantes.
+              {t('intro')}
             </p>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Minha abordagem combina design centrado no usuário com as mais 
-              modernas tecnologias, garantindo soluções que não apenas funcionam 
-              perfeitamente, mas também encantam.
+              {t('approach')}
             </p>
           </motion.div>
 
-          {/* Lado direito - Skills */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -77,7 +68,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-foreground">
-              Skills & Technologies
+              {t('skillsTitle')}
             </h3>
             <div className="flex flex-wrap gap-3 sm:gap-4">
               {skills.map((skill, index) => (
@@ -96,11 +87,10 @@ export default function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Highlights Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {highlights.map((item, index) => (
             <motion.div
-              key={item.title}
+              key={item.key}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -109,10 +99,10 @@ export default function AboutSection() {
             >
               <item.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary group-hover:text-pray transition-colors mb-3 sm:mb-4" />
               <h4 className="text-lg sm:text-xl font-bold mb-2 text-card-foreground">
-                {item.title}
+                {t(`highlights.${item.key}.title`)}
               </h4>
               <p className="text-sm sm:text-base text-muted-foreground">
-                {item.description}
+                {t(`highlights.${item.key}.description`)}
               </p>
             </motion.div>
           ))}

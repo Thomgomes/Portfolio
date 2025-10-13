@@ -1,74 +1,108 @@
 {
-  "header": {
+  "nav": {
     "home": "Início",
-    "about": "Sobre Mim",
+    "about": "Sobre",
     "projects": "Projetos",
-    "services": "Serviços",
+    "experience": "Experiência",
     "contact": "Contato"
   },
-  "home": {
-    "welcome": "Bem-vindo!",
-    "title": "Desenvolvedor web",
-    "subtitle": "Thom Gomes",
-    "description": "Transformo conceitos em experiências digitais intuitivas e agradaveis.",
-    "cvbutton": "Baixar CV",
-    "contactbutton": "contate-me"
-  },
-  "about": {
-    "title": "Um Pouco Sobre Mim",
-    "description": "Meu nome é Thomás Gomes, mas pode me chamar de Thom. Trabalho como desenvolvedor front-end freelancer, criando interfaces modernas e eficientes, com foco em performance, animações, responsividade e SEO. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas."
-  },
-  "projects": {
-    "title": "Projetos Recentes",
-    "description": "Aqui estão alguns dos meus trabalhos recentes. Para ver mais, visite meu GitHub.",
-    "project1": {
-      "title": "Projeto A",
-      "description": "Uma breve descrição do que foi este projeto, as tecnologias usadas e o objetivo alcançado."
-    },
-    "project2": {
-      "title": "Projeto B",
-      "description": "Uma breve descrição do que foi este projeto, as tecnologias usadas e o objetivo alcançado."
-    },
-    "github": "Ver repositório",
-    "monitor-play": "Visualizar projeto"
-  },
-  "services": {
-    "title": "O que eu ofereço",
-    "service1": {
-      "title": "Desenvolvimento Web",
-      "description": "Criação de sites e aplicações web completas, do zero à implantação."
-    },
-    "service2": {
-      "title": "UI/UX Design",
-      "description": "Interfaces focadas na experiência do usuário, criando layouts intuitivos e atraentes."
-    },
-    "service3": {
-      "title": "Otimização & Performance",
-      "description": "Análise e melhoria para garantir que seu site seja rápido e eficiente."
-    },
-    "service4": {
-      "title": "Integração com APIs",
-      "description": "Conexão com APIs e bancos de dados para criar experiências ricas e dinâmicas."
-    },
-    "service5": {
-      "title": "SEO Técnico",
-      "description": "Otimização para melhorar o ranking do seu site nos mecanismos de busca."
-    },
-    "service6": {
-      "title": "Animações e Microinterações",
-      "description": "Criação de interfaces envolventes com animações fluidas que melhoram a experiência."
-    },
-    "service7": {
-      "title": "Manutenção e Suporte",
-      "description": "Suporte contínuo para garantir que seu site continue seguro, atualizado e performático."
+  "hero": {
+    "name": "Thom Gomes",
+    "year": "2025",
+    "title": "portfolio",
+    "subtitle": "UX/UI Design",
+    "description": "Desenvolvedor Full Stack focado em criar experiências digitais excepcionais através de design elegante e código limpo.",
+    "cta": {
+      "projects": "Ver Projetos",
+      "contact": "Entre em Contato"
     }
   },
-  "contact": {
-    "title": "Vamos trabalhar juntos?",
-    "subtitle": "Se você tem uma ideia ou projeto em mente, entre em contato. Estou disponível para novos desafios.",
-    "button": "Entrar em Contato"
+  "about": {
+    "title": "Sobre",
+    "titleHighlight": "Mim",
+    "intro": "Sou um desenvolvedor full stack apaixonado por criar experiências digitais que fazem a diferença. Com expertise em desenvolvimento web e mobile, transformo ideias em produtos escaláveis e elegantes.",
+    "approach": "Minha abordagem combina design centrado no usuário com as mais modernas tecnologias, garantindo soluções que não apenas funcionam perfeitamente, mas também encantam.",
+    "skillsTitle": "Skills & Technologies",
+    "highlights": {
+      "cleanCode": {
+        "title": "Clean Code",
+        "description": "Código limpo e manutenível"
+      },
+      "design": {
+        "title": "Design",
+        "description": "Interfaces elegantes"
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Otimização máxima"
+      },
+      "uxFocus": {
+        "title": "UX Focus",
+        "description": "Centrado no usuário"
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured",
+    "titleHighlight": "Projects",
+    "card": {
+      "category": "Desenvolvimento Web",
+      "description": "Descrição do projeto",
+      "descriptionTitle": "DESCRIÇÃO",
+      "buttons": {
+        "live": "LIVE",
+        "code": "CODE"
+      }
+    }
+  },
+  "experience": {
+    "title": "Work",
+    "titleHighlight": "Timeline",
+    "roles": "Responsabilidades",
+    "timeline": [
+      {
+        "title": "Eduplaytion",
+        "company": "Noruega",
+        "location": "Noruega",
+        "period": "Fev 2022",
+        "description": "Trabalhei no desenvolvimento do Painel do Professor, Painel dos Pais e outras aplicações internas da Numetry",
+        "roles": ["Desenvolvedor Frontend"]
+      },
+      {
+        "title": "GDS TEC",
+        "company": "Brasil",
+        "location": "Brasil",
+        "period": "Set 2021 - Jan 2022",
+        "description": "Atuei como líder de desenvolvimento front-end e mobile em projetos relacionados a apostas esportivas e aplicativos de delivery de comida",
+        "roles": ["Líder de Desenvolvimento Web e Mobile"]
+      },
+      {
+        "title": "Leap Studios",
+        "company": "Brasil",
+        "location": "Brasil",
+        "period": "Jul 2021 - Jan 2022",
+        "description": "Fui um dos fundadores e também diretor criativo. Meu papel principal era organizar as tarefas entre as equipes e estar à frente das negociações",
+        "roles": ["Diretor Criativo"]
+      },
+      {
+        "title": "Quacks Interatividade Digital",
+        "company": "Brasil",
+        "location": "Brasil",
+        "period": "Mar 2020 - Nov 2020",
+        "description": "Principal desenvolvedor front-end trabalhando em landing pages estáticas e dinâmicas, aplicativos de e-commerce, apps mobile e jogos educativos",
+        "roles": ["Desenvolvedor FullStack"]
+      }
+    ]
   },
   "footer": {
-    "text": "Todos os direitos reservados."
+    "name": "Thom Gomes",
+    "role": "Desenvolvedor Frontend e ...",
+    "contact": {
+      "title": "Contato",
+      "email": "seuemail@exemplo.com",
+      "phone": "+55 (11) 99999-9999"
+    },
+    "copyright": "Thom Gomes. Todos os direitos reservados.",
+    "backToTop": "Voltar ao topo"
   }
 }

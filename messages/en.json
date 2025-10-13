@@ -1,73 +1,108 @@
 {
-  "header": {
+  "nav": {
     "home": "Home",
-    "about": "About Me",
+    "about": "About",
     "projects": "Projects",
-    "services": "Services",
+    "experience": "Experience",
     "contact": "Contact"
   },
-  "home": {
-    "title": "Thom Gomes",
-    "subtitle": "Front-end Developer",
-    "description": "I transform concepts into intuitive and delightful digital experiences.",
-    "cvbutton": "Download CV",
-    "contactbutton": "Contacte me"
-  },
-  "about": {
-    "title": "A Little About Me",
-    "description": "My name is Thomás Gomes, but you can call me Thom. I work as a freelance Front-end Developer creating modern and efficient interfaces, focused on performance, animations, responsiveness, and SEO. I’m currently studying Systems Analysis and Development."
-  },
-  "projects": {
-    "title": "Recent Projects",
-    "description": "Here are some of my recent works. To see more, visit my GitHub.",
-    "project1": {
-      "title": "Project A",
-      "description": "A brief description of what this project was, the technologies used, and the goal achieved."
-    },
-    "project2": {
-      "title": "Project B",
-      "description": "A brief description of what this project was, the technologies used, and the goal achieved."
-    },
-    "github": "repository",
-    "monitor-play": "View project"
-  },
-  "services": {
-    "title": "What I Offer",
-    "service1": {
-      "title": "Web Development",
-      "description": "Creation of complete websites and web applications, from scratch to deployment."
-    },
-    "service2": {
-      "title": "UI/UX Design",
-      "description": "User-centric interfaces, creating intuitive and attractive layouts."
-    },
-    "service3": {
-      "title": "Optimization & Performance",
-      "description": "Analysis and improvement to ensure your website is fast and efficient."
-    },
-    "service4": {
-      "title": "API Integration",
-      "description": "Connection with APIs and databases to create rich and dynamic experiences."
-    },
-    "service5": {
-      "title": "Technical SEO",
-      "description": "Optimization to improve your site's ranking in search engines."
-    },
-    "service6": {
-      "title": "Animations & Microinteractions",
-      "description": "Creating engaging interfaces with fluid animations that enhance the experience."
-    },
-    "service7": {
-      "title": "Maintenance and Support",
-      "description": "Ongoing support to ensure your site remains secure, updated, and performant."
+  "hero": {
+    "name": "Thom Gomes",
+    "year": "2025",
+    "title": "portfolio",
+    "subtitle": "UX/UI Design",
+    "description": "Full Stack Developer focused on creating exceptional digital experiences through elegant design and clean code.",
+    "cta": {
+      "projects": "View Projects",
+      "contact": "Get in Touch"
     }
   },
-  "contact": {
-    "title": "Let's work together?",
-    "subtitle": "If you have an idea or project in mind, get in touch. I'm available for new challenges.",
-    "button": "Get in Touch"
+  "about": {
+    "title": "About",
+    "titleHighlight": "Me",
+    "intro": "I'm a full stack developer passionate about creating digital experiences that make a difference. With expertise in web and mobile development, I transform ideas into scalable and elegant products.",
+    "approach": "My approach combines user-centered design with the most modern technologies, ensuring solutions that not only work perfectly, but also delight.",
+    "skillsTitle": "Skills & Technologies",
+    "highlights": {
+      "cleanCode": {
+        "title": "Clean Code",
+        "description": "Clean and maintainable code"
+      },
+      "design": {
+        "title": "Design",
+        "description": "Elegant interfaces"
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Maximum optimization"
+      },
+      "uxFocus": {
+        "title": "UX Focus",
+        "description": "User-centered"
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured",
+    "titleHighlight": "Projects",
+    "card": {
+      "category": "Web Development",
+      "description": "Project description",
+      "descriptionTitle": "DESCRIPTION",
+      "buttons": {
+        "live": "LIVE",
+        "code": "CODE"
+      }
+    }
+  },
+  "experience": {
+    "title": "Work",
+    "titleHighlight": "Timeline",
+    "roles": "Roles",
+    "timeline": [
+      {
+        "title": "Eduplaytion",
+        "company": "Norway",
+        "location": "Norway",
+        "period": "Feb 2022",
+        "description": "Worked in the development of the Numetry Teacher Panel, Parent Panel, and other internal applications",
+        "roles": ["Frontend Developer"]
+      },
+      {
+        "title": "GDS TEC",
+        "company": "Brazil",
+        "location": "Brazil",
+        "period": "Sep 2021 - Jan 2022",
+        "description": "Worked as the leader front-end and mobile developer in projects related to sports gambling and food shopping apps",
+        "roles": ["Web and Mobile Development Leader"]
+      },
+      {
+        "title": "Leap Studios",
+        "company": "Brazil",
+        "location": "Brazil",
+        "period": "Jul 2021 - Jan 2022",
+        "description": "I was one of the founders and also the creative director. My main role was to organize the tasks between teams and be in front of negotiations",
+        "roles": ["Creative Director"]
+      },
+      {
+        "title": "Quacks Interatividade Digital",
+        "company": "Brazil",
+        "location": "Brazil",
+        "period": "Mar 2020 - Nov 2020",
+        "description": "Main front-end developer working on static and dynamic landing pages, e-commerce apps, mobile apps, and educational games",
+        "roles": ["FullStack Developer"]
+      }
+    ]
   },
   "footer": {
-    "text": "All rights reserved."
+    "name": "Thom Gomes",
+    "role": "Frontend Developer and ...",
+    "contact": {
+      "title": "Contact",
+      "email": "youremail@example.com",
+      "phone": "+55 (11) 99999-9999"
+    },
+    "copyright": "Thom Gomes. All rights reserved.",
+    "backToTop": "Back to top"
   }
 }
