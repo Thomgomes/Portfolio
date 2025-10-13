@@ -3,6 +3,8 @@ import { Sora, Work_Sans } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/components/theme-provider";
+import CustomCursor from "@/components/gsap/custom-cursor";
+import SmoothScroll from "@/components/gsap/smooth-scroll";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -38,6 +40,7 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <CustomCursor/>
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
