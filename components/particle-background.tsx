@@ -13,7 +13,6 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ parentRef }) =>
     const canvas = canvasRef.current;
     const parentElement = parentRef.current;
 
-    // Criamos uma "zona segura". Todo o código só será executado se ambos existirem.
     if (canvas && parentElement) {
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
@@ -131,7 +130,6 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ parentRef }) =>
         mouse.y = null;
       };
 
-      // Adicionando os listeners
       window.addEventListener('resize', handleResize);
       parentElement.addEventListener('mousemove', handleMouseMove);
       parentElement.addEventListener('mouseleave', handleMouseOut);
@@ -139,7 +137,6 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ parentRef }) =>
       init();
       animate();
 
-      // A função de limpeza agora também está na zona segura.
       return () => {
         cancelAnimationFrame(animationFrameId);
         window.removeEventListener('resize', handleResize);

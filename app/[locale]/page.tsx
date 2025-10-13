@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/card";
 import { useRef } from "react";
 import Pray from "@/components/pray";
+import IntroAnimation from "@/components/intro-animation";
 
 const skills = [
   "TypeScript",
@@ -64,6 +65,7 @@ export default function HomePage() {
 
   return (
     <>
+      <IntroAnimation />
       <Header />
       <main>
         <section
@@ -83,16 +85,22 @@ export default function HomePage() {
                 </h3>
               </div>
               <div className="mt-10 flex justify-center gap-6">
-                <Button asChild size="lg" className="gap-2 lg:py-6 font-semibold lg:text-lg">
+                <Button
+                  asChild
+                  size="lg"
+                  className="gap-2 lg:py-6 font-semibold lg:text-lg"
+                >
                   <a href="/thom-gomes-cv.pdf" download>
-                    <ArrowBigDownDash className=""/>
+                    <ArrowBigDownDash className="" />
                     {th("cvbutton")}
                   </a>
                 </Button>
-                <Button asChild size="lg" className="gap-2 lg:py-6 font-semibold lg:text-lg">
-                  <a href={`#${t("contact")}`}>
-                    {th("contactbutton")}
-                  </a>
+                <Button
+                  asChild
+                  size="lg"
+                  className="gap-2 lg:py-6 font-semibold lg:text-lg"
+                >
+                  <a href={`#${t("contact")}`}>{th("contactbutton")}</a>
                 </Button>
               </div>
             </div>

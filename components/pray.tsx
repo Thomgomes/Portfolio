@@ -4,22 +4,18 @@ export default function Pray() {
   return (
     <div className="scale-[0.7] lg:scale-[0.85]">
       <Card className="w-full max-w-2xl shadow-lg p-0 gap-0">
-        {/* Cabeçalho estilizado para parecer uma janela de app */}
         <CardHeader className="flex flex-row items-center gap-2 bg-muted/50 px-4 py-4">
-          {/* "Botões" de janela estilo macOS */}
           <div className="flex gap-1.5">
             <div className="h-3 w-3 rounded-full bg-red-500"></div>
             <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
             <div className="h-3 w-3 rounded-full bg-green-500"></div>
           </div>
-          {/* Título do arquivo */}
           <p className="text-sm text-muted-foreground">dialog/pray.ts</p>
         </CardHeader>
 
         <CardContent className="p-4 bg-background-alt">
           <pre className="overflow-x-auto text-sm">
             <code>
-              {/* Usamos <span> para colorir partes específicas do código */}
               <span className="text-primary-light">const</span>{" "}
               <span className="text-foreground">holyPrayer</span>{" "}
               <span className="text-primary-light">=</span>{" "}
