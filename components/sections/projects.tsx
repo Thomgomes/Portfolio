@@ -20,24 +20,24 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Fynli",
     category: "Web Development",
-    year: 2024,
+    year: 2025,
     imagem: "https://placehold.co/100x100/0ea5e9/ffffff?text=Item",
     description:
       "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    technologies: ["React", "Node.js", "MongoDB"],
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn", "Bagui dos graficos", "Supabase","SQL"],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
     id: 2,
-    title: "Mobile Banking App",
-    category: "Mobile Development",
-    year: 2024,
+    title: "tutu teste para 2",
+    category: "??? Development",
+    year: 2025,
     imagem: "https://placehold.co/100x100/0ea5e9/ffffff?text=Item",
     description:
-      "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Lorem Ipsum.",
     technologies: ["React Native", "Firebase", "TypeScript"],
     liveUrl: "#",
     githubUrl: "#",
