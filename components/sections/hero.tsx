@@ -7,7 +7,7 @@ export default function HeroSection() {
   const t = useTranslations('hero');
   
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
+    <section className="relative min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
       <div 
         className="glow-orb w-[1800px] h-[700px] top-20 left-10"
         style={{ 
@@ -44,8 +44,8 @@ export default function HeroSection() {
 
         <motion.div
           className="relative mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           
@@ -53,30 +53,26 @@ export default function HeroSection() {
             {t('title')}
           </h1>
           
-          <div className="absolute right-0 sm:right-[10%] -bottom-4 sm:bottom-0 md:bottom-4 text-right ">
+          <motion.div 
+          className="absolute right-0 sm:right-[10%] -bottom-4 sm:bottom-0 md:bottom-4 text-right "
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          >
             <div className="flex items-center gap-2 justify-end glass-card backdrop-blur-md px-2 py-0.5 rounded-xl">
               <Sparkles className="w-[3.5svw] h-[3.5svh] sm:w-5 sm:h-5 text-pray" />
               <p className="text-[3.8svw] sm:text-xl md:text-2xl font-semibold">
                 {t('subtitle')}
               </p>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
 
-        <motion.p
-          className="mt-12 sm:mt-16 md:mt-20 text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div
+          className="mt-12 sm:mt-12 flex justify-center flex-col sm:flex-row gap-4"
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          {t('description')}
-        </motion.p>
-
-        <motion.div
-          className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1 }}
         >
           <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary-light transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
             {t('cta.projects')}
