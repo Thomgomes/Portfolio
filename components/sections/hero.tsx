@@ -5,9 +5,10 @@ import { useTranslations } from 'next-intl';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
+  const tnav = useTranslations('nav');
   
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
+    <section id={tnav('home')} className="relative min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
       <div 
         className="glow-orb w-[1800px] h-[700px] top-20 left-10"
         style={{ 
@@ -75,12 +76,12 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary-light transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
-            {t('cta.projects')}
+            {t('cta.cv')}
             <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-1 transition-transform" />
           </button>
-          <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-border hover:border-primary text-foreground hover:text-primary font-semibold rounded-full transition-all duration-300">
+          <a href={`#${tnav('footer')}`} className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-border hover:border-primary text-foreground hover:text-primary font-semibold rounded-full transition-all duration-300">
             {t('cta.contact')}
-          </button>
+          </a>
         </motion.div>
       </div>
 

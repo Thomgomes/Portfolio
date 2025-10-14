@@ -11,9 +11,8 @@
     "year": "2025",
     "title": "portfolio",
     "subtitle": "Frontend",
-    "description": "Desenvolvedor Frontend focado em criar experiências digitais excepcionais através de design elegante e código limpo.",
     "cta": {
-      "projects": "Ver Projetos",
+      "cv": "Baixar CV",
       "contact": "Entre em Contato"
     }
   },

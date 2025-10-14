@@ -4,13 +4,14 @@ import { useTranslations } from 'next-intl';
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const tnav = useTranslations('nav');
   
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-background-alt">
+    <footer id={tnav('footer')} className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-background-alt">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-0 md:justify-between mb-8">
           <div>

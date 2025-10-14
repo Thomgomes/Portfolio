@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import ParticleBackground from "@/components/particle-background";
+import { useTranslations } from "next-intl";
 
 interface Project {
   id: number;
@@ -128,8 +129,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 export default function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const tnav = useTranslations('nav');
+  
   return (
     <section
+      id={tnav('projects')}
       ref={sectionRef}
       className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8"
     >
