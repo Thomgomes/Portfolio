@@ -30,8 +30,16 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <span>{t('name')}</span>
-          <span>{t('year')}</span>
+          <header className="flex w-full items-center justify-between">
+          <span className="text-sm font-medium tracking-wide md:text-base">
+            {t('name')}
+          </span>
+          {/* A linha cresce para preencher o espaço disponível */}
+          <div className="mx-4 h-px flex-grow bg-accent/30"></div>
+          <span className="text-sm font-medium tracking-wide md:text-base">
+            {new Date().getFullYear()}
+          </span>
+        </header>
         </motion.div>
 
         <motion.div
@@ -40,14 +48,15 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] xl:text-[15rem] font-bold leading-none tracking-tight text-foreground">
+          
+          <h1 className="text-center text-[20svw] sm:text-9xl md:text-[11rem] lg:text-[14rem] xl:text-[15rem] font-bold leading-none tracking-tight text-foreground">
             {t('title')}
           </h1>
           
-          <div className="absolute right-0 -bottom-4 sm:bottom-4 md:bottom-8 text-right">
-            <div className="flex items-center gap-2 justify-end">
-              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-pray" />
-              <p className="text-base sm:text-xl md:text-2xl font-semibold">
+          <div className="absolute right-0 sm:right-[10%] -bottom-4 sm:bottom-0 md:bottom-4 text-right ">
+            <div className="flex items-center gap-2 justify-end glass-card backdrop-blur-md px-2 py-0.5 rounded-xl">
+              <Sparkles className="w-[3.5svw] h-[3.5svh] sm:w-5 sm:h-5 text-pray" />
+              <p className="text-[3.8svw] sm:text-xl md:text-2xl font-semibold">
                 {t('subtitle')}
               </p>
             </div>
