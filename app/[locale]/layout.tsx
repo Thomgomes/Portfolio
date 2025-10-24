@@ -39,7 +39,7 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <CustomCursor/>
+            {/* <CustomCursor/> */}
             <div className="grain-overlay" />
             {children}
           </ThemeProvider>

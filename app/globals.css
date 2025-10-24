@@ -10,7 +10,7 @@
   --gradient-start: #fafafa;
   --gradient-middle: #f4e8e9;
   --gradient-end: #edd8da;
-  
+
   /* Hero gradient background - COM VERMELHO */
   --hero-gradient-from: #ffffff;
   --hero-gradient-via: #fce8e9;
@@ -21,15 +21,15 @@
   --card-foreground: #1c1c1c;
 
   /* Primary colors - Vermelho #A4161A e derivados */
-  --primary: #A4161A;
+  --primary: #a4161a;
   --primary-foreground: #ffffff;
-  --primary-light: #D72028;
+  --primary-light: #d72028;
   --primary-light-foreground: #ffffff;
-  --primary-heavy: #7D1115;
-  
+  --primary-heavy: #7d1115;
+
   /* Variações extras do vermelho */
-  --primary-lighter: #FF3B44;
-  --primary-darker: #5A0C0F;
+  --primary-lighter: #ff3b44;
+  --primary-darker: #5a0c0f;
 
   /* Secondary */
   --secondary: #71717a;
@@ -37,7 +37,7 @@
 
   /* Accent colors */
   --pray: #4f39f6;
-  --accent: #A4161A;
+  --accent: #a4161a;
   --accent-foreground: #ffffff;
 
   /* Muted */
@@ -63,7 +63,7 @@
   --gradient-start: #0d0d0d;
   --gradient-middle: #1a0f10;
   --gradient-end: #2d1516;
-  
+
   /* Hero gradient dark - COM VERMELHO */
   --hero-gradient-from: #0d0d0d;
   --hero-gradient-via: #1c1213;
@@ -74,15 +74,15 @@
   --card-foreground: #e2e8f0;
 
   /* Primary colors dark - Vermelho mantém vibrante */
-  --primary: #D72028;
+  --primary: #d72028;
   --primary-foreground: #ffffff;
-  --primary-light: #FF3B44;
+  --primary-light: #ff3b44;
   --primary-light-foreground: #ffffff;
-  --primary-heavy: #A4161A;
-  
+  --primary-heavy: #a4161a;
+
   /* Variações extras */
-  --primary-lighter: #FF5A61;
-  --primary-darker: #7D1115;
+  --primary-lighter: #ff5a61;
+  --primary-darker: #7d1115;
 
   /* Secondary dark */
   --secondary: #a1a1aa;
@@ -90,7 +90,7 @@
 
   /* Accent dark */
   --pray: #a69cf2;
-  --accent: #D72028;
+  --accent: #d72028;
   --accent-foreground: #ffffff;
 
   /* Muted dark */
@@ -174,22 +174,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-space-grotesk);
   font-weight: 700;
   letter-spacing: -0.02em;
-}
-
-/* Cursor customizado - esconde padrão */
-* {
-  cursor: none;
-}
-
-/* Reativa cursor em mobile e tablets */
-@media (max-width: 768px) {
-  * {
-    cursor: auto;
-  }
 }
 
 /* Background com dots */
@@ -253,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
 .title-gradient-vibrant {
   background: radial-gradient(
     138.06% 1036.51% at 95.25% -2.54%,
-    #FF5A61 14.06%,
+    #ff5a61 14.06%,
     var(--primary-light) 51.02%,
     var(--primary) 79.09%
   );
@@ -324,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gradient-overlay::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(
@@ -420,15 +413,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Glow effect para vermelho */
 .glow-red {
-  box-shadow: 0 0 20px rgba(164, 22, 26, 0.3),
-              0 0 40px rgba(164, 22, 26, 0.2),
-              0 0 60px rgba(164, 22, 26, 0.1);
+  box-shadow: 0 0 20px rgba(164, 22, 26, 0.3), 0 0 40px rgba(164, 22, 26, 0.2),
+    0 0 60px rgba(164, 22, 26, 0.1);
 }
 
 .dark .glow-red {
-  box-shadow: 0 0 20px rgba(215, 32, 40, 0.4),
-              0 0 40px rgba(215, 32, 40, 0.3),
-              0 0 60px rgba(215, 32, 40, 0.2);
+  box-shadow: 0 0 20px rgba(215, 32, 40, 0.4), 0 0 40px rgba(215, 32, 40, 0.3),
+    0 0 60px rgba(215, 32, 40, 0.2);
 }
 
 /* Button com efeito de brilho vermelho */
@@ -438,7 +429,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button-glow::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -478,16 +469,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes grain-animation {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -10%); }
-  20% { transform: translate(-15%, 5%); }
-  30% { transform: translate(7%, -25%); }
-  40% { transform: translate(-5%, 25%); }
-  50% { transform: translate(-15%, 10%); }
-  60% { transform: translate(15%, 0%); }
-  70% { transform: translate(0%, 15%); }
-  80% { transform: translate(3%, 35%); }
-  90% { transform: translate(-10%, 10%); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
 }
 
 /* Frosted Glass Effect - Para modais e cards */
@@ -496,16 +508,14 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.15),
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
 }
 
 .dark .frosted-glass {
   background: rgba(28, 28, 28, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
-    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
 }
 
@@ -534,7 +544,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes float-orb {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   33% {
@@ -555,8 +566,7 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.15),
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
   position: relative;
@@ -572,15 +582,14 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(25px) saturate(150%);
   -webkit-backdrop-filter: blur(25px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 
-    0 8px 32px 0 rgba(0, 0, 0, 0.4),
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.05);
 }
 
 /* Glassmorphism com efeito de reflexo */
 .glass-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -601,7 +610,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Efeito de borda animada no hover */
 .glass-card::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
@@ -633,11 +642,9 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(40px) saturate(200%) brightness(110%);
   -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(110%);
   border: 1.5px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 
-    0 12px 48px 0 rgba(31, 38, 135, 0.2),
+  box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.2),
     inset 0 2px 0 0 rgba(255, 255, 255, 0.5),
-    inset 0 -2px 0 0 rgba(255, 255, 255, 0.15),
-    0 0 0 1px rgba(164, 22, 26, 0.1);
+    inset 0 -2px 0 0 rgba(255, 255, 255, 0.15), 0 0 0 1px rgba(164, 22, 26, 0.1);
 }
 
 .dark .glass-card-heavy {
@@ -649,11 +656,9 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(50px) saturate(180%) brightness(90%);
   -webkit-backdrop-filter: blur(50px) saturate(180%) brightness(90%);
   border: 1.5px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
-    0 12px 48px 0 rgba(0, 0, 0, 0.5),
+  box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.5),
     inset 0 2px 0 0 rgba(255, 255, 255, 0.2),
-    inset 0 -2px 0 0 rgba(255, 255, 255, 0.08),
-    0 0 0 1px rgba(215, 32, 40, 0.2);
+    inset 0 -2px 0 0 rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(215, 32, 40, 0.2);
 }
 
 /* Glow effect para glass cards */
@@ -662,7 +667,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-card-glow::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -2px;
   background: linear-gradient(
@@ -704,7 +709,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-card-noise::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
@@ -720,17 +725,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .glass-card-lift:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 
-    0 20px 60px 0 rgba(31, 38, 135, 0.25),
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.5),
-    0 0 0 1px rgba(164, 22, 26, 0.3);
+  box-shadow: 0 20px 60px 0 rgba(31, 38, 135, 0.25),
+    inset 0 2px 0 0 rgba(255, 255, 255, 0.5), 0 0 0 1px rgba(164, 22, 26, 0.3);
 }
 
 .dark .glass-card-lift:hover {
-  box-shadow: 
-    0 20px 60px 0 rgba(0, 0, 0, 0.6),
-    inset 0 2px 0 0 rgba(255, 255, 255, 0.25),
-    0 0 0 1px rgba(215, 32, 40, 0.4);
+  box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.6),
+    inset 0 2px 0 0 rgba(255, 255, 255, 0.25), 0 0 0 1px rgba(215, 32, 40, 0.4);
 }
 
 /* Shimmer effect */
@@ -749,7 +750,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-card-shimmer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
