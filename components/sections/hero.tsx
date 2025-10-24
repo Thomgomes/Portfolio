@@ -75,10 +75,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary-light transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+          <a href='/CV_ThomGomes.pdf' download={"CV_ThomGomes.pdf"} className="group px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary-light transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
             {t('cta.cv')}
             <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-1 transition-transform" />
-          </button>
+          </a>
           <a href={`#${tnav('footer')}`} className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-border hover:border-primary text-foreground hover:text-primary font-semibold rounded-full transition-all duration-300">
             {t('cta.contact')}
           </a>
