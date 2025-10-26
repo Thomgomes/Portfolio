@@ -25,25 +25,20 @@ export default function Footer() {
             </div>
             <div className="flex gap-16 md:gap-4">
               <a 
-                href="#" 
+                href="https://github.com/Thomgomes" 
+                target='_blank'
                 className="text-secondary hover:text-primary transition-colors duration-300"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/thom%C3%A1s-gomes-796b8152/"
+                target='_blank'
                 className="text-secondary hover:text-primary transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
-              </a>
-              <a 
-                href="#" 
-                className="text-secondary hover:text-pray transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
             </div>
           </div>
