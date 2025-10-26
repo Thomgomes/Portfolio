@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowBigDownDash, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function HeroSection() {
@@ -77,9 +77,9 @@ export default function HeroSection() {
         >
           <a href='/CV_ThomGomes.pdf' download={"CV_ThomGomes.pdf"} className="group px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary-light transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
             {t('cta.cv')}
-            <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-1 transition-transform" />
+            <ArrowBigDownDash className="h-4 sm:h-5 -translate-y-[.15rem] group-hover:animate-bounce-down !transition-transform duration-300 ease-out"/>
           </a>
-          <a href={`#${tnav('footer')}`} className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-border hover:border-primary text-foreground hover:text-primary font-semibold rounded-full transition-all duration-300">
+          <a href={`#${tnav('footer')}`} className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary-heavy hover:border-primary text-foreground hover:text-primary font-semibold rounded-full transition-all duration-300">
             {t('cta.contact')}
           </a>
         </motion.div>

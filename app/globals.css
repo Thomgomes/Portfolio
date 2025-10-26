@@ -160,6 +160,8 @@
   --radius-DEFAULT: 0.75rem;
   --radius-sm: 0.5rem;
   --radius-lg: 1rem;
+
+  --animate-bounce-down: bounceDown 0.6s ease-in-out infinite;
 }
 
 html {
@@ -765,3 +767,11 @@ h6 {
   animation: shimmer 3s infinite;
 }
 
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(-0.15rem);
+  }
+  50% {
+    transform: translateY(0.15rem);
+  }
+}
