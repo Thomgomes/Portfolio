@@ -61,7 +61,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </div>
 
       {/* Lado Direito - Descrição e Ações */}
-      <div className="flex flex-col gap-6 mt-6 pt-6 border-t border-border/50 lg:mt-0 lg:pt-0 lg:border-t-0">
+      <div className="flex flex-col gap-6 -mt-8 pt-6 border-t border-border/50 lg:mt-0 lg:pt-0 lg:border-t-0">
         <div className="glass-card glass-card-heavy rounded-2xl p-6 flex-1">
           <h4 className="text-lg sm:text-xl font-bold text-foreground mb-4">
             {t("descriptionTitle")}
