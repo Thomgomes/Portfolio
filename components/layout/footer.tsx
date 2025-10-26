@@ -33,7 +33,7 @@ export default function Footer() {
                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a 
-                href="https://www.linkedin.com/in/thom%C3%A1s-gomes-796b8152/"
+                href="https://www.linkedin.com/in/thom-gomes/"
                 target='_blank'
                 className="text-secondary hover:text-primary transition-colors duration-300"
                 aria-label="LinkedIn"
