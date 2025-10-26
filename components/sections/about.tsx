@@ -7,7 +7,6 @@ export default function AboutSection() {
   const t = useTranslations("about");
   const tnav = useTranslations("nav");
 
-  // Pega o array de parágrafos do JSON
   const aboutParagraphs = (t.raw("about") as string[]) || [];
 
   const skills = [

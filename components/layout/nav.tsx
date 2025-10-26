@@ -38,8 +38,8 @@ export default function Nav() {
 
   return (
     <>
-      <header className="z-50 w-full fixed top-0 border-b border-border/40 backdrop-blur-sm bg-background/80">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <header className="z-50 w-full fixed top-0 border-b border-border/40 backdrop-blur-sm bg-background/30">
+        <div className="max-w-7xl  mx-auto px-4 py-3 flex items-center justify-between">
           <a
             href="https://github.com/Thomgomes"
             target="_blank"
@@ -60,7 +60,7 @@ export default function Nav() {
                   <a
                     href={`#${t(link.key)}`}
                     className={cn(
-                      "text- font-semibold hover:underline underline-offset-4 transition-colors",
+                      "text-lg font-semibold hover:underline underline-offset-4 transition-colors",
                      activeSection === link.key
                     ? "text-primary bg-primary/10"
                     : "text-muted-foreground"
@@ -70,15 +70,10 @@ export default function Nav() {
                   </a>
                 </li>
               ))}
-              <li>
-                <ThemeToggleButton />
-              </li>
             </ul>
           </nav>
 
-          <div className="md:hidden">
-            <ThemeToggleButton />
-          </div>
+          <ThemeToggleButton />
         </div>
       </header>
 
