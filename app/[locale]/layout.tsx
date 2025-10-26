@@ -3,7 +3,6 @@ import { Sora, Work_Sans } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/components/theme-provider";
-import CustomCursor from "@/components/custom-cursor";
 
 const sora = Sora({
   subsets: ["latin"],
