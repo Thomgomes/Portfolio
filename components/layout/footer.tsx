@@ -1,5 +1,5 @@
 'use client';
-import { Github, Linkedin, Instagram, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, ArrowUp } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function Footer() {
