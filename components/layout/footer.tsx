@@ -48,10 +48,10 @@ export default function Footer() {
               {t('contact.title')}
             </h4>
             <p className="text-sm sm:text-base text-muted-foreground mb-2">
-              {t('contact.email')}
+              math.011@hotmail.com
             </p>
             <p className="text-sm sm:text-base text-muted-foreground mb-4">
-              {t('contact.phone')}
+              +55 81 98354-7260
             </p>
           </div>
         </div>
