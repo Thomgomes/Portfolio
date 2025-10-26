@@ -39,7 +39,7 @@ export default function Nav() {
   return (
     <>
       <header className="z-50 w-full fixed top-0 border-b border-border/40 backdrop-blur-sm bg-background/80">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <a
             href="https://github.com/Thomgomes"
             target="_blank"
