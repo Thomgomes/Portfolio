@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       
-      <main className="relative bg-background text-foreground overflow-x-hidden">
+      <main className="relative bg-background text-foreground overflow-x-hidden pb-14 md:pb-0">
         <Header/>
         <HeroSection/>
         <WorkTimeline/>
