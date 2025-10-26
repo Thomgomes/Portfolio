@@ -55,13 +55,13 @@
     }
   },
   "experience": {
-    "title": "Work",
-    "titleHighlight": "Timeline",
+    "title": "Experiência",
+    "titleHighlight": "Profissional",
     "roles": "Responsabilidades",
     "timeline": [
       {
         "title": "Desenvolvedor Front-end",
-        "company": "Freelancer/Autônomo",
+        "company": "Autônomo",
         "location": "Pernambuco, Brasil",
         "period": "2022 - Atual",
         "description": [
