@@ -60,36 +60,44 @@
     "roles": "Roles",
     "timeline": [
       {
-        "title": "Eduplaytion",
-        "company": "Norway",
-        "location": "Norway",
-        "period": "Feb 2022",
-        "description": "Worked in the development of the Numetry Teacher Panel, Parent Panel, and other internal applications",
-        "roles": ["Frontend Developer"]
+        "title": "Frontend Developer",
+        "company": "Freelancer/Self-Employed",
+        "location": "Pernambuco, Brazil",
+        "period": "2022 - Present",
+        "description": [
+          "Develop and implement modern, responsive, and optimized web interfaces using React, Next.js, TypeScript, and Flutter.",
+          "Responsible for the architecture and delivery of complete end-to-end solutions, from landing pages to complex applications with RESTful API integration, authentication systems, and advanced state management.",
+          "Collaborate in agile methodologies (Scrum) with active participation in weekly sprints, code reviews, and strategic alignment with multidisciplinary teams."
+        ],
+        "roles": ["Frontend Developer", "Mobile Developer", "UI/UX Designer"]
       },
       {
-        "title": "GDS TEC",
-        "company": "Brazil",
-        "location": "Brazil",
-        "period": "Sep 2021 - Jan 2022",
-        "description": "Worked as the leader front-end and mobile developer in projects related to sports gambling and food shopping apps",
-        "roles": ["Web and Mobile Development Leader"]
+        "title": "Children's Programming Instructor",
+        "company": "Programming School",
+        "location": "Pernambuco, Brazil",
+        "period": "May 2025 - Aug 2025",
+        "description": [
+          "Taught programming classes to children, teaching fundamentals of programming logic and JavaScript through playful methodologies and hands-on practical projects.",
+          "Created and developed original educational content aligned with Sustainable Development Goals (SDG 11), sparking genuine interest in technology among children.",
+          "Promoted accessible and engaging learning, adapting complex concepts to age-appropriate language for children."
+        ],
+        "roles": ["Programming Instructor", "Educational Content Developer"]
       },
       {
-        "title": "Leap Studios",
-        "company": "Brazil",
-        "location": "Brazil",
-        "period": "Jul 2021 - Jan 2022",
-        "description": "I was one of the founders and also the creative director. My main role was to organize the tasks between teams and be in front of negotiations",
-        "roles": ["Creative Director"]
-      },
-      {
-        "title": "Quacks Interatividade Digital",
-        "company": "Brazil",
-        "location": "Brazil",
-        "period": "Mar 2020 - Nov 2020",
-        "description": "Main front-end developer working on static and dynamic landing pages, e-commerce apps, mobile apps, and educational games",
-        "roles": ["FullStack Developer"]
+        "title": "Academic Projects Developer",
+        "company": "Uninassau",
+        "location": "Pernambuco, Brazil",
+        "period": "2024 - Present",
+        "description": [
+          "Designed and developed a complete virtual store for academic demonstration fair, applying knowledge in e-commerce, UX/UI, and systems architecture.",
+          "Led front-end architecture, implementation of advanced features, and technical presentation of the project at institutional academic events.",
+          "Conducted remote mentoring sessions via Discord for students interested in or struggling with programming content taught in class."
+        ],
+        "roles": [
+          "Frontend Developer",
+          "E-commerce Developer",
+          "Academic Mentor"
+        ]
       }
     ]
   },

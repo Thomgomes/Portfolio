@@ -60,36 +60,47 @@
     "roles": "Responsabilidades",
     "timeline": [
       {
-        "title": "Eduplaytion",
-        "company": "Noruega",
-        "location": "Noruega",
-        "period": "Fev 2022",
-        "description": "Trabalhei no desenvolvimento do Painel do Professor, Painel dos Pais e outras aplicações internas da Numetry",
-        "roles": ["Desenvolvedor Frontend"]
+        "title": "Desenvolvedor Front-end",
+        "company": "Freelancer/Autônomo",
+        "location": "Pernambuco, Brasil",
+        "period": "2022 - Atual",
+        "description": [
+          "Desenvolvo e implemento interfaces web modernas, responsivas e otimizadas utilizando React, Next.js, TypeScript e Flutter.",
+          "Responsável pela arquitetura e entrega de soluções completas end-to-end, desde landing pages até aplicações complexas com integração de APIs RESTful, sistemas de autenticação e gerenciamento de estado avançado.",
+          "Colaboro em metodologias ágeis (Scrum) com participação ativa em sprints semanais, code reviews e alinhamento estratégico com equipes multidisciplinares."
+        ],
+        "roles": ["Frontend Developer", "Mobile Developer", "UI/UX Designer"]
       },
       {
-        "title": "GDS TEC",
-        "company": "Brasil",
-        "location": "Brasil",
-        "period": "Set 2021 - Jan 2022",
-        "description": "Atuei como líder de desenvolvimento front-end e mobile em projetos relacionados a apostas esportivas e aplicativos de delivery de comida",
-        "roles": ["Líder de Desenvolvimento Web e Mobile"]
+        "title": "Professor de Programação Infantil",
+        "company": "Escolinha de Programação",
+        "location": "Pernambuco, Brasil",
+        "period": "Maio 2025 - Ago 2025",
+        "description": [
+          "Ministrei aulas de programação para crianças, ensinando fundamentos de lógica de programação e JavaScript através de metodologias lúdicas e projetos práticos hands-on.",
+          "Criei e desenvolvi conteúdo didático original alinhado aos Objetivos de Desenvolvimento Sustentável (ODS 11), despertando o interesse genuíno das crianças por tecnologia.",
+          "Promovi aprendizado acessível e engajador, adaptando conceitos complexos para uma linguagem apropriada ao público infantil."
+        ],
+        "roles": [
+          "Instrutor de Programação",
+          "Desenvolvedor de Conteúdo Didático"
+        ]
       },
       {
-        "title": "Leap Studios",
-        "company": "Brasil",
-        "location": "Brasil",
-        "period": "Jul 2021 - Jan 2022",
-        "description": "Fui um dos fundadores e também diretor criativo. Meu papel principal era organizar as tarefas entre as equipes e estar à frente das negociações",
-        "roles": ["Diretor Criativo"]
-      },
-      {
-        "title": "Quacks Interatividade Digital",
-        "company": "Brasil",
-        "location": "Brasil",
-        "period": "Mar 2020 - Nov 2020",
-        "description": "Principal desenvolvedor front-end trabalhando em landing pages estáticas e dinâmicas, aplicativos de e-commerce, apps mobile e jogos educativos",
-        "roles": ["Desenvolvedor FullStack"]
+        "title": "Desenvolvedor de Projetos Acadêmicos",
+        "company": "Uninassau",
+        "location": "Pernambuco, Brasil",
+        "period": "2024 - Atual",
+        "description": [
+          "Projetei e desenvolvi loja virtual completa para feira demonstrativa acadêmica, aplicando conhecimentos em e-commerce, UX/UI e arquitetura de sistemas.",
+          "Liderei a arquitetura front-end, implementação de funcionalidades avançadas e apresentação técnica do projeto em eventos acadêmicos institucionais.",
+          "Conduzi sessões de mentoria remota via Discord para estudantes com interesse ou dificuldade nos conteúdos de programação ministrados em sala de aula."
+        ],
+        "roles": [
+          "Frontend Developer",
+          "Desenvolvedor de E-commerce",
+          "Mentor Acadêmico"
+        ]
       }
     ]
   },
