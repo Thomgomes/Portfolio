@@ -106,7 +106,8 @@
           "Responsible for the architecture and delivery of complete end-to-end solutions, from landing pages to complex applications with RESTful API integration, authentication systems, and advanced state management.",
           "Collaborate in agile methodologies (Scrum) with active participation in weekly sprints, code reviews, and strategic alignment with multidisciplinary teams."
         ],
-        "roles": ["Frontend Developer", "Mobile Developer", "UI/UX Designer"]
+        "roles": ["Frontend Developer", "Mobile Developer", "UI/UX Designer"],
+        "type": "work"
       },
       {
         "title": "Children's Programming Instructor",
@@ -118,7 +119,8 @@
           "Created and developed original educational content aligned with Sustainable Development Goals (SDG 11), sparking genuine interest in technology among children.",
           "Promoted accessible and engaging learning, adapting complex concepts to age-appropriate language for children."
         ],
-        "roles": ["Programming Instructor", "Educational Content Developer"]
+        "roles": ["Programming Instructor", "Educational Content Developer"],
+        "type": "work" 
       },
       {
         "title": "Academic Projects Developer",
@@ -134,7 +136,8 @@
           "Frontend Developer",
           "E-commerce Developer",
           "Academic Mentor"
-        ]
+        ],
+        "type": "education"
       }
     ]
   },

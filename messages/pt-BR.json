@@ -106,7 +106,8 @@
           "Responsável pela arquitetura e entrega de soluções completas end-to-end, desde landing pages até aplicações complexas com integração de APIs RESTful, sistemas de autenticação e gerenciamento de estado avançado.",
           "Colaboro em metodologias ágeis (Scrum) com participação ativa em sprints semanais, code reviews e alinhamento estratégico com equipes multidisciplinares."
         ],
-        "roles": ["Frontend Developer", "Mobile Developer", "UI/UX Designer"]
+        "roles": ["Frontend Developer", "Mobile Developer", "UI/UX Designer"],
+        "type": "work"
       },
       {
         "title": "Professor de Programação Infantil",
@@ -121,7 +122,8 @@
         "roles": [
           "Instrutor de Programação",
           "Desenvolvedor de Conteúdo Didático"
-        ]
+        ],
+        "type": "work"
       },
       {
         "title": "Desenvolvedor de Projetos Acadêmicos",
@@ -137,7 +139,8 @@
           "Frontend Developer",
           "Desenvolvedor de E-commerce",
           "Mentor Acadêmico"
-        ]
+        ],
+        "type": "education"
       }
     ]
   },
