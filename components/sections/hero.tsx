@@ -70,7 +70,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="mt-12 sm:mt-12 flex justify-center flex-col sm:flex-row gap-4"
+          className="mt-12 sm:mt-12 flex justify-center flex-row gap-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
