@@ -3,10 +3,11 @@
 
 import { useTranslations } from "next-intl";
 import { ThemeToggleButton } from "../theme-toggle-button";
-import { Home, FolderOpen, User } from "lucide-react";
+import { Home, FolderOpen, User, Globe } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Nav() {
   const t = useTranslations("nav");
@@ -20,7 +21,9 @@ export default function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navLinks.map(link => document.getElementById(t(link.key)));
+      const sections = navLinks.map((link) =>
+        document.getElementById(t(link.key))
+      );
       const scrollPosition = window.scrollY + 200;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -61,9 +64,9 @@ export default function Nav() {
                     href={`#${t(link.key)}`}
                     className={cn(
                       "text-lg font-semibold hover:underline underline-offset-4 transition-colors",
-                     activeSection === link.key
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground"
+                      activeSection === link.key
+                        ? "text-primary bg-primary/10"
+                        : "text-muted-foreground"
                     )}
                   >
                     {t(link.key)}
@@ -73,7 +76,17 @@ export default function Nav() {
             </ul>
           </nav>
 
-          <ThemeToggleButton />
+          <div className="flex items-center gap-4">
+              <Link
+                href={t("about") === "Sobre" ? "/en" : "/pt-BR"}
+                className="relative group p-2 rounded-full transition-colors duration-200 bg-muted hover:bg-border"
+              >
+                <Globe className="h-5 text-muted-foreground group-hover:text-primary transition-colors duration-200" />
+                <span className="absolute right-0 top-5 text-nowrap group-hover:text-accent">{t("about") === "Sobre" ? "pt" : "en"}</span>
+              </Link>
+
+            <ThemeToggleButton />
+          </div>
         </div>
       </header>
 
