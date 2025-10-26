@@ -19,8 +19,19 @@
   "about": {
     "title": "Sobre",
     "titleHighlight": "Mim",
-    "intro": "Sou um desenvolvedor full stack apaixonado por criar experiências digitais que fazem a diferença. Com expertise em desenvolvimento web e mobile, transformo ideias em produtos escaláveis e elegantes.",
-    "approach": "Minha abordagem combina design centrado no usuário com as mais modernas tecnologias, garantindo soluções que não apenas funcionam perfeitamente, mas também encantam.",
+    "about": [
+      "Olá, me chamo Thomás D'Angelo de Almeida Gomes, mas pode me chamar de Thom. Sou desenvolvedor front-end e universitário. Sou uma pessoa curiosa, dedicada e sempre em busca de aprender algo novo.",
+
+      "Desde cedo sempre tive interesse em jogos. Jogar era meu passatempo favorito com meu irmão mais velho, porém, além de só jogar, eu tinha muita curiosidade em como os jogos funcionavam e se a gente podia criar jogos algum dia. Com esse interesse, comecei a mexer com RPG Maker, o que me fez ter uma base de como as peças se encaixam.",
+
+      "Então, a partir daí, sempre que me perguntavam o que eu queria ser quando crescesse, eu respondia 'quero trabalhar com tecnologia'.",
+
+      "Durante a quarentena, eu iniciei um curso técnico em análise e desenvolvimento de sistemas, no qual tive contato com diversas linguagens de programação e tecnologias. Foi nesse período que decidi me aprofundar no desenvolvimento front-end. Sempre que tinha um projeto acadêmico, eu ficava responsável pelo design e programação.",
+
+      "Após o meu curso técnico, comecei a pegar pequenos projetos freelancer, o que para mim foi ótimo. Enquanto eu estudava, eu conseguia trabalhar e ver como diversas outras coisas funcionavam dentro de um projeto.",
+
+      "No início de 2024, comecei minha graduação em ADS na Uninassau, onde conheci pessoas incríveis e outras nem tanto assim, mas isso faz parte da vida. E, daqui para frente, pretendo melhorar cada vez mais."
+    ],
     "skillsTitle": "Skills & Technologies",
     "highlights": {
       "cleanCode": {

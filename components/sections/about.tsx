@@ -1,38 +1,61 @@
-'use client';
-import { motion } from 'framer-motion';
-import { Code2, Palette, Zap, Users } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+"use client";
+import { motion } from "framer-motion";
+import { Code2, Palette, Zap, Users } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function AboutSection() {
-  const t = useTranslations('about');
-  const tnav = useTranslations('nav');
-  
+  const t = useTranslations("about");
+  const tnav = useTranslations("nav");
+
+  // Pega o array de parágrafos do JSON
+  const aboutParagraphs = (t.raw("about") as string[]) || [];
+
   const skills = [
-    'React', 'Next.js', 'TypeScript', 'Node.js',
-    'Tailwind CSS', 'Framer Motion', 'MongoDB', 'PostgreSQL'
+    "TypeScript",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "React Native",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Framer Motion",
+    "Node.js",
+    "Supabase",
+    "SQL",
+    "PostgreSQL",
+    "REST APIs",
+    "Docker",
+    "MongoDB",
+    "Git",
+    "GitHub",
+    "Vercel",
+    "Figma",
   ];
 
   const highlights = [
-    { 
-      icon: Code2, 
-      key: 'cleanCode'
+    {
+      icon: Code2,
+      key: "cleanCode",
     },
-    { 
-      icon: Palette, 
-      key: 'design'
+    {
+      icon: Palette,
+      key: "design",
     },
-    { 
-      icon: Zap, 
-      key: 'performance'
+    {
+      icon: Zap,
+      key: "performance",
     },
-    { 
-      icon: Users, 
-      key: 'uxFocus'
-    }
+    {
+      icon: Users,
+      key: "uxFocus",
+    },
   ];
 
   return (
-    <section id={tnav('about')} className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 dotted-background">
+    <section
+      id={tnav("about")}
+      className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 dotted-background"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,7 +65,8 @@ export default function AboutSection() {
           className="mb-12 sm:mb-16"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-foreground">
-            {t('title')} <span className="title-gradient">{t('titleHighlight')}</span>
+            {t("title")}{" "}
+            <span className="title-gradient">{t("titleHighlight")}</span>
           </h2>
           <div className="line h-1 w-24 rounded-full" />
         </motion.div>
@@ -53,13 +77,16 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="space-y-4"
           >
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-4 sm:mb-6">
-              {t('intro')}
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
-              {t('approach')}
-            </p>
+            {aboutParagraphs.map((paragraph, index) => (
+              <p
+                key={index}
+                className="text-base sm:text-lg text-muted-foreground leading-relaxed"
+              >
+                {paragraph}
+              </p>
+            ))}
           </motion.div>
 
           <motion.div
@@ -69,7 +96,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-foreground">
-              {t('skillsTitle')}
+              {t("skillsTitle")}
             </h3>
             <div className="flex flex-wrap gap-3 sm:gap-4">
               {skills.map((skill, index) => (
@@ -98,7 +125,7 @@ export default function AboutSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="p-4 sm:p-6 bg-card border border-border rounded-lg hover:border-primary transition-all duration-300 group card-gradient-hover"
             >
-              <item.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary group-hover:text-pray transition-colors mb-3 sm:mb-4" />
+              <item.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary group-hover:text-primary transition-colors mb-3 sm:mb-4" />
               <h4 className="text-lg sm:text-xl font-bold mb-2 text-card-foreground">
                 {t(`highlights.${item.key}.title`)}
               </h4>
