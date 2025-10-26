@@ -7,47 +7,20 @@ import ParticleBackground from "@/components/particle-background";
 import { useTranslations } from "next-intl";
 
 interface Project {
-  id: number;
   title: string;
   category: string;
   year: number;
   imagem: string;
+  description: string[];
   technologies: string[];
-  description: string;
   liveUrl: string;
   githubUrl: string;
 }
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Fynli",
-    category: "Web Development",
-    year: 2025,
-    imagem: "https://placehold.co/100x100/0ea5e9/ffffff?text=Item",
-    description:
-      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn", "Bagui dos graficos", "Supabase","SQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 2,
-    title: "tutu teste para 2",
-    category: "??? Development",
-    year: 2025,
-    imagem: "https://placehold.co/100x100/0ea5e9/ffffff?text=Item",
-    description:
-      "Lorem Ipsum.",
-    technologies: ["React Native", "Firebase", "TypeScript"],
-    liveUrl: "#",
-    githubUrl: "#",
-  }
-];
-
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const t = useTranslations("projects.card");
 
   return (
     <motion.div
@@ -73,12 +46,12 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </div>
         <div className="flex justify-between">
           <p className="text-primary font-medium">{project.category}</p>
-          <p>{project.year}</p>
+          <p className="text-muted-foreground">{project.year}</p>
         </div>
         <div className="flex flex-wrap gap-2">
-          {project.technologies.map((tech, idx) => (
+          {project.technologies.map((tech, techIndex) => (
             <span
-              key={idx}
+              key={techIndex}
               className="px-3 py-1.5 glass-card-heavy rounded-full text-sm font-medium text-foreground"
             >
               {tech}
@@ -88,15 +61,21 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </div>
 
       {/* Lado Direito - Descrição e Ações */}
-      {/* Adiciona margem superior no mobile e linha divisória para separação visual */}
       <div className="flex flex-col gap-6 mt-6 pt-6 border-t border-border/50 lg:mt-0 lg:pt-0 lg:border-t-0">
         <div className="glass-card glass-card-heavy rounded-2xl p-6 flex-1">
           <h4 className="text-lg sm:text-xl font-bold text-foreground mb-4">
-            DESCRIÇÃO
+            {t("descriptionTitle")}
           </h4>
-          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-            {project.description}
-          </p>
+          <div className="space-y-3">
+            {project.description.map((paragraph, pIndex) => (
+              <p
+                key={pIndex}
+                className="text-muted-foreground leading-relaxed text-sm sm:text-base"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
         <div className="flex gap-4">
           <a
@@ -107,7 +86,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           >
             <ExternalLink className="w-5 h-5 text-primary group-hover:text-primary-light transition-colors" />
             <span className="font-semibold text-foreground text-sm sm:text-base">
-              LIVE
+              {t("buttons.live")}
             </span>
           </a>
           <a
@@ -118,7 +97,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           >
             <Github className="w-5 h-5 text-primary group-hover:text-primary-light transition-colors" />
             <span className="font-semibold text-foreground text-sm sm:text-base">
-              CODE
+              {t("buttons.code")}
             </span>
           </a>
         </div>
@@ -129,11 +108,15 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 export default function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const tnav = useTranslations('nav');
-  
+  const tnav = useTranslations("nav");
+  const t = useTranslations("projects");
+
+  // Pega a lista de projetos do JSON
+  const projects = (t.raw("list") as Project[]) || [];
+
   return (
     <section
-      id={tnav('projects')}
+      id={tnav("projects")}
       ref={sectionRef}
       className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8"
     >
@@ -153,14 +136,14 @@ export default function ProjectsSection() {
           className="mb-12 sm:mb-16"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-foreground">
-            Featured <span className="title-gradient">Projects</span>
+            {t("title")} <span className="title-gradient">{t("titleHighlight")}</span>
           </h2>
           <div className="line h-1 w-24 rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 gap-12 lg:gap-16">
           {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </div>
       </div>

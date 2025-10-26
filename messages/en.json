@@ -42,17 +42,43 @@
     }
   },
   "projects": {
-    "title": "Featured",
+    "title": "My",
     "titleHighlight": "Projects",
     "card": {
       "category": "Web Development",
-      "description": "Project description",
       "descriptionTitle": "DESCRIPTION",
       "buttons": {
         "live": "LIVE",
         "code": "CODE"
       }
-    }
+    },
+    "list": [
+      {
+        "title": "Fynli",
+        "category": "Web Development",
+        "year": 2025,
+        "imagem": "/Fynli.png",
+        "description": [
+          "Fynli is a comprehensive web application built to solve a real problem: the mess of managing personal and family expenses in a single account.",
+          "The project was developed end-to-end, with a focus on data security, performance, and a reactive user experience. Using React and Next.js on the frontend, TypeScript for static typing, Tailwind CSS and Shadcn for a modern and responsive design.",
+          "On the backend, Supabase was chosen to handle authentication and SQL database management, ensuring scalability and security. Fynli offers an intuitive interface so users can efficiently track their finances.",
+          "Fynli is more than a simple expense manager; it's a solution designed to make users' financial lives easier."
+        ],
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Shadcn",
+          "Chart.js",
+          "Supabase",
+          "SQL",
+          "MVP"
+        ],
+        "liveUrl": "https://fynli.vercel.app/",
+        "githubUrl": "https://github.com/Thomgomes/fynli"
+      }
+    ]
   },
   "experience": {
     "title": "Work",
