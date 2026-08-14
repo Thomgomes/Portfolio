@@ -1,6 +1,8 @@
 const projectFynli = "/Fynli.png";
-const projectGestao = "https://placehold.co/600x450/1e293b/ffffff?text=Gestao+de+Servicos";
-const projectPadaria = "https://placehold.co/600x450/1e293b/ffffff?text=Controle+de+Padaria";
+const projectGestao =
+  "https://placehold.co/600x450/1e293b/ffffff?text=Gestao+de+Servicos";
+const projectPadaria =
+  "https://placehold.co/600x450/1e293b/ffffff?text=Controle+de+Padaria";
 
 export const experiences = [
   {
@@ -8,29 +10,51 @@ export const experiences = [
     company: "Consultoria Autônoma em Software",
     period: "2023 — Atual",
     description:
-      "Atuação de ponta a ponta na arquitetura, desenvolvimento e sustentação de sistemas web e soluções cloud-native para instituições e clientes finais: \n" + 
-      "• Plataforma de Avaliação Institucional: Atendimento a 3.200+ alunos e 200+ docentes com relatórios anônimos e estabilidade sob picos de 300 acessos simultâneos. \n" +
-      "• Automação Comercial & Estoque: Modelagem de Ficha Técnica (BOM) para baixa automatizada de insumos e controle de produção. \n" + 
-      "• PWA & Engenharia Cross-Platform: Solução de mobilidade para técnicos em todo o Brasil (8 administradores) com sincronização offline-first e controle de idempotência. \n" +
-      "• UI/UX & Interfaces Web: Prototipação interativa e design systems no Figma, desenvolvendo interfaces responsivas com foco em usabilidade, alta conversão e SEO." ,
-    tech: ["Next.js", "TypeScript", "JavaScript", "React", "Python", "FastAPI", "Node.js", "PostgreSQL", "Docker", "Figma"],
+      "Atuação de ponta a ponta na arquitetura, desenvolvimento e sustentação de sistemas web e soluções de software para instituições e clientes finais:\n" +
+      "• Plataforma de Avaliação Institucional: Desenvolvimento de sistema de avaliação docente para universidade privada, utilizado por 3.200+ alunos e com 200+ professores avaliados, incluindo formulários dinâmicos, relatórios 100% anônimos e suporte a picos de 200 a 300 acessos simultâneos.\n" +
+      "• PWA & Engenharia Cross-Platform: Desenvolvimento de solução de mobilidade para operações técnicas em campo de abrangência nacional, utilizada por técnicos em múltiplas regiões do Brasil e gerenciada por 8 administradores, com sincronização offline-first utilizando Service Workers e controle de idempotência.\n" +
+      "• Automação Comercial & Gestão de Estoque: Desenvolvimento de sistema de gestão de estoque e produção utilizando modelagem de Ficha Técnica de Produtos (BOM — Bill of Materials) para automatização do abatimento proporcional de matéria-prima.\n" +
+      "• UI/UX & Interfaces Web: Prototipação de interfaces no Figma e desenvolvimento de landing pages responsivas com foco em conversão, acessibilidade e SEO.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "React",
+      "Python",
+      "FastAPI",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "Figma",
+    ],
   },
+
   {
     role: "Desenvolvedor Full Stack",
     company: "Leap - Startup",
     period: "2025 — 2026",
     description:
-      "Atuação na arquitetura e liderança técnica de ecossistema e-commerce multilojas e plataformas de gestão:\n" +
-      "• E-commerce: Sustentação de plataforma para 8 operações comerciais ativas, com estabilidade para picos de 150+ acessos simultâneos e 1.200+ visitas mensais.\n" +
-      "• Engenharia Full Stack & UI/UX: Prototipação UI/UX no Figma, interfaces em Next.js e liderança do back-end em NestJS/Prisma com autenticação OTP. Responsável pelo desenvolvimento de 12+ landing pages, resolução de bugs em 10+ sistemas de clientes e containerização com Docker.",
-    tech: ["Next.js", "TypeScript", "NestJS", "Prisma", "Docker", "Figma", "UX/UI"],
+      "Atuação no desenvolvimento e sustentação de um ecossistema de e-commerce multilojas utilizado por 8 operações comerciais ativas:\n" +
+      "• E-commerce: Desenvolvimento e manutenção da plataforma, garantindo estabilidade para picos de 150+ acessos simultâneos e 1.200+ visitas mensais.\n" +
+      "• Full Stack & UI/UX: Responsabilidade pelo desenvolvimento frontend em Next.js, backend em Node.js/NestJS com Prisma e prototipação de interfaces e experiências de usuário no Figma. Desenvolvimento de 12+ landing pages, resolução de bugs críticos em 10+ sistemas legados e projetos sob demanda, além da containerização dos ambientes com Docker.\n" +
+      "• Colaboração Técnica: Participação em reuniões, discussões e decisões de projeto, contribuindo com sugestões relacionadas à arquitetura, funcionalidades, UI/UX e evolução das aplicações",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "NestJS",
+      "Prisma",
+      "Docker",
+      "Figma",
+      "UI/UX",
+    ],
   },
+
   {
     role: "Professor de Programação Infantil",
     company: "Escola de Programação",
     period: "2025",
     description:
-      "Ensino de algoritmos, lógica de programação e JavaScript através de metodologias práticas e ativas. Desenvolvimento de material didático original alinhado à ODS 12 (Consumo e Produção Responsáveis), estimulando o pensamento crítico e conectando conceitos fundamentais de engenharia de software a desafios reais de sustentabilidade.",
+      "Ensino de algoritmos, lógica de programação e JavaScript por meio de metodologias práticas e ativas. Desenvolvimento de material didático original alinhado à ODS 12 (Consumo e Produção Responsáveis), estimulando o pensamento crítico e conectando conceitos de programação a desafios reais de sustentabilidade.",
     tech: ["JavaScript", "Lógica de Programação", "Didática"],
   },
 ];
@@ -39,10 +63,10 @@ export const projects = [
   {
     name: "Fynli",
     description:
-      "Fynli é um aplicativo web completo construído para resolver um problema real: a confusão de gerenciar gastos pessoais e familiares em uma única conta.\n\n" +
-      "O projeto foi desenvolvido de ponta a ponta, com foco em segurança de dados, performance e uma experiência de usuário reativa. Utilizando React e Next.js no frontend, TypeScript para tipagem estática, Tailwind CSS e Shadcn para um design moderno e responsivo.\n\n" +
-      "No backend, o Supabase foi escolhido para gerenciar autenticação e banco de dados SQL, garantindo escalabilidade e segurança. O Fynli oferece uma interface intuitiva para que os usuários possam acompanhar suas finanças de forma eficiente.\n\n" +
-      "O Fynli é mais do que um simples gerenciador de despesas; é uma solução pensada para facilitar a vida financeira dos seus usuários.",
+      "Plataforma SaaS desenvolvida para organização e acompanhamento de gastos pessoais e familiares, permitindo estruturar despesas por diferentes perfis e visualizar a distribuição dos gastos ao longo do tempo.\n\n" +
+      "O projeto foi desenvolvido de ponta a ponta utilizando React, Next.js e TypeScript no frontend, com Tailwind CSS para construção da interface e Chart.js para visualização dos dados financeiros.\n\n" +
+      "No backend, o Supabase foi utilizado em conjunto com PostgreSQL para autenticação e persistência dos dados, com Row Level Security (RLS) para controle de acesso e funções SQL customizadas (RPCs) para operações específicas do sistema.\n\n" +
+      "O projeto também conta com dashboards gráficos e uma arquitetura voltada à segurança e organização dos dados financeiros dos usuários.",
     image: projectFynli,
     tech: [
       "React",
@@ -51,17 +75,28 @@ export const projects = [
       "Chart.js",
       "Supabase",
       "PostgreSQL",
-      "MVP",
     ],
     live: "https://fynli.vercel.app/",
     github: "https://github.com/Thomgomes/fynli",
   },
+
   {
-    name: "Sistema de Gestão de Ordens de Serviço ( Demo )",
+    name: "Sistema de Gestão de Ordens de Serviço — Demo",
     description:
-      "Desenvolvimento de plataforma full stack para gerenciamento de operações de campo e ordens de serviço. Desenvolvimento de painel administrativo, PWA para técnicos de campo e portal de acompanhamento para clientes. Implementação de sincronização offline com controle de idempotência e tratamento de conflitos. Implementação de autenticação JWT, controle de acesso por perfis e arquitetura multi-tenant.",
+      "Plataforma full stack para gerenciamento de operações de campo e ordens de serviço, combinando painel administrativo, PWA para técnicos e portal de acompanhamento para clientes.\n\n" +
+      "Implementação de sincronização offline-first com controle de idempotência e tratamento de conflitos de dados, permitindo a continuidade das operações mesmo em ambientes sem conexão com a internet.\n\n" +
+      "Desenvolvimento de arquitetura multi-tenant com autenticação JWT e controle granular de permissões utilizando RBAC.\n\n" +
+      "Ambiente containerizado com Docker Compose para execução padronizada da API e do banco de dados PostgreSQL.",
     image: projectGestao,
-    tech: ["React", "TypeScript", "FastAPI", "PostgreSQL", "SQLAlchemy", "Docker"],
+    tech: [
+      "React",
+      "TypeScript",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Docker",
+      "Docker Compose",
+    ],
     live: "",
     github: "#",
   },
