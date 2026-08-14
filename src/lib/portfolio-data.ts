@@ -4,32 +4,34 @@ const projectPadaria = "https://placehold.co/600x450/1e293b/ffffff?text=Controle
 
 export const experiences = [
   {
-    role: "Desenvolvedor Full Stack Freelancer",
-    company: "Autônomo",
+    role: "Desenvolvedor Full Stack",
+    company: "Consultoria Autônoma em Software",
     period: "2023 — Atual",
     description:
-      "Desenvolvimento de aplicações web, sistemas internos e plataformas SaaS para clientes de diferentes segmentos. Atuação desde o levantamento de requisitos até deploy e manutenção. Construção de APIs e serviços backend utilizando Python (FastAPI) e Node.js. Desenvolvimento de dashboards administrativos, sistemas de autenticação, integrações e gerenciamento de dados. Participação na modelagem de produtos, definição de funcionalidades, UX e prototipação utilizando Figma. Colaboração com equipes multidisciplinares utilizando metodologias ágeis e desenvolvimento de projetos de forma independente.",
-    tech: ["Python", "FastAPI", "Node.js", "React", "TypeScript", "PostgreSQL", "Docker", "Figma"],
+      "Atuação de ponta a ponta na arquitetura, desenvolvimento e sustentação de sistemas web e soluções cloud-native para instituições e clientes finais: \n" + 
+      "• Plataforma de Avaliação Institucional: Atendimento a 3.200+ alunos e 200+ docentes com relatórios anônimos e estabilidade sob picos de 300 acessos simultâneos. \n" +
+      "• Automação Comercial & Estoque: Modelagem de Ficha Técnica (BOM) para baixa automatizada de insumos e controle de produção. \n" + 
+      "• PWA & Engenharia Cross-Platform: Solução de mobilidade para técnicos em todo o Brasil (8 administradores) com sincronização offline-first e controle de idempotência. \n" +
+      "• UI/UX & Interfaces Web: Prototipação interativa e design systems no Figma, desenvolvendo interfaces responsivas com foco em usabilidade, alta conversão e SEO." ,
+    tech: ["Next.js", "TypeScript", "JavaScript", "React", "Python", "FastAPI", "Node.js", "PostgreSQL", "Docker", "Figma"],
+  },
+  {
+    role: "Desenvolvedor Full Stack",
+    company: "Leap - Startup",
+    period: "2025 — 2026",
+    description:
+      "Atuação na arquitetura e liderança técnica de ecossistema e-commerce multilojas e plataformas de gestão:\n" +
+      "• E-commerce: Sustentação de plataforma para 8 operações comerciais ativas, com estabilidade para picos de 150+ acessos simultâneos e 1.200+ visitas mensais.\n" +
+      "• Engenharia Full Stack & UI/UX: Prototipação UI/UX no Figma, interfaces em Next.js e liderança do back-end em NestJS/Prisma com autenticação OTP. Responsável pelo desenvolvimento de 12+ landing pages, resolução de bugs em 10+ sistemas de clientes e containerização com Docker.",
+    tech: ["Next.js", "TypeScript", "NestJS", "Prisma", "Docker", "Figma", "UX/UI"],
   },
   {
     role: "Professor de Programação Infantil",
     company: "Escola de Programação",
     period: "2025",
     description:
-      "• Ministrei aulas de programação para crianças, ensinando fundamentos de lógica de programação e JavaScript através de metodologias lúdicas e projetos práticos hands-on.\n" +
-      "• Criei e desenvolvi conteúdo didático original alinhado aos Objetivos de Desenvolvimento Sustentável (ODS 11), despertando o interesse genuíno das crianças por tecnologia.\n" +
-      "• Promovi aprendizado acessível e engajador, adaptando conceitos complexos para uma linguagem apropriada ao público infantil.",
+      "Ensino de algoritmos, lógica de programação e JavaScript através de metodologias práticas e ativas. Desenvolvimento de material didático original alinhado à ODS 12 (Consumo e Produção Responsáveis), estimulando o pensamento crítico e conectando conceitos fundamentais de engenharia de software a desafios reais de sustentabilidade.",
     tech: ["JavaScript", "Lógica de Programação", "Didática"],
-  },
-  {
-    role: "Projetos Acadêmicos",
-    company: "Uninassau",
-    period: "2024 — 2025",
-    description:
-      "• Projetei e desenvolvi loja virtual completa para feira demonstrativa acadêmica, aplicando conhecimentos em e-commerce, UX/UI e arquitetura de sistemas.\n" +
-      "• Liderei a arquitetura front-end, implementação de funcionalidades avançadas e apresentação técnica do projeto em eventos acadêmicos institucionais.\n" +
-      "• Conduzi sessões de mentoria remota via Discord para estudantes com interesse ou dificuldade nos conteúdos de programação ministrados em sala de aula.",
-    tech: ["React", "JavaScript", "UX/UI", "Mentoria"],
   },
 ];
 
